@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Алина Арбекова](https://up.htmlacademy.ru/adaptive/25/user/2003579).
-* Наставник: `Неизвестно`.
+* Наставник: `Ярослав Шевцов`(https://htmlacademy.ru/profile/redx).
 
 ---
 
