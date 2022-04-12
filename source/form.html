@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body class="form-body">
+    <header class="main-header">
+        <a class="main-header__logo">
+          <img class="main-header__logo-image" src="img/index/mishka-logo-mobile.svg" width="86" height="35" alt="Mishka.">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__container">
+            <ul class="main-nav__list site-tree-list">
+              <li class="site-tree-list__item">
+                <a href="index.html">
+                  <span class="visually-hidden">Главная</span>
+                </a>
+              </li>
+              <li class="site-tree-list__item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="site-tree-list__item">
+                <a href="catalog.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <ul class="main-nav__list user-nav-list">
+              <li class="user-nav-list__item">
+                <a href="#">Поиск по сайту</a>
+              </li>
+              <li class="user-nav-list__item">
+                <a href="#">Корзина: пока пуста</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="form-main">
+          <h1 class="form-main__title">Вязание на заказ</h1>
+          <p class="form-main__prompting">
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
+          <section class="form-main__filters-forms-container">
+            <h2 class="visually-hidden">Фильтры и формы для оформления заказа</h2>
+            <form class="form-main__filters-forms-group order-forms" action="https://echo.htmlacademy.ru" method="post">
+              <div class="order-forms__radio-container radio-filters">
+                <!--RADIO-->
+                <fieldset class="radio-filters__group">
+                  <legend class="radio-filters__legend filters-group-legend">ТИП</legend>
+                  <ul class="radio-filters__list">
+                    <li class="radio-filters__item">
+                      <label class="radio-filters__control">
+                        <input class="radio-filters__control-input visually-hidden" type="radio" name="merch-type-choice">
+                        <span class="radio-filters__control-mark"></span>
+                        <span class="radio-filters__control-label">Аксессуар для интерьера</span>
+                      </label>
+                    </li>
+                    <li class="radio-filters__item">
+                      <label class="radio-filters__control">
+                        <input class="radio-filters__control-input visually-hidden" type="radio" name="merch-type-choice">
+                        <span class="radio-filters__control-mark"></span>
+                        <span class="radio-filters__control-label">Детская игрушка</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <!--CHECKBOX-->
+                <div class="order-forms__checkbox-container checkbox-filters">
+                  <fieldset class="checkbox-filters__group">
+                    <legend class="checkbox-filters__legend filters-group-legend">ЦВЕТ</legend>
+                    <ul class="checkbox-filters__list">
+                      <li class="checkbox-filters__item">
+                        <label class="checkbox-filters__control">
+                          <input class="checkbox-filters__control-input visually-hidden" type="checkbox" name="white-merch">
+                          <span class="checkbox-filters__control-mark"></span>
+                          <span class="checkbox-filters__control-label">Белый</span>
+                        </label>
+                      </li>
+                      <li class="checkbox-filters__item">
+                        <label class="checkbox-filters__control">
+                          <input class="checkbox-filters__control-input visually-hidden" type="checkbox" name="gray-merch">
+                          <span class="checkbox-filters__control-mark"></span>
+                          <span class="checkbox-filters__control-label">Серый</span>
+                        </label>
+                      </li>
+                      <li class="checkbox-filters__item">
+                        <label class="checkbox-filters__control">
+                          <input class="checkbox-filters__control-input visually-hidden" type="checkbox" name="tiffany-merch">
+                          <span class="checkbox-filters__control-mark"></span>
+                          <span class="checkbox-filters__control-label">Тиффани</span>
+                        </label>
+                      </li>
+                      <li class="checkbox-filters__item">
+                        <label class="checkbox-filters__control">
+                          <input class="checkbox-filters__control-input visually-hidden" type="checkbox" name="black-merch">
+                          <span class="checkbox-filters__control-mark"></span>
+                          <span class="checkbox-filters__control-label">Черный</span>
+                        </label>
+                      </li>
+                      <li class="checkbox-filters__item">
+                        <label class="checkbox-filters__control">
+                          <input class="checkbox-filters__control-input visually-hidden" type="checkbox" name="pink-merch">
+                          <span class="checkbox-filters__control-mark"></span>
+                          <span class="checkbox-filters__control-label">Розовый</span>
+                        </label>
+                      </li>
+                      <li class="checkbox-filters__item">
+                        <label class="checkbox-filters__control">
+                          <input class="checkbox-filters__control-input visually-hidden" type="checkbox" name="orange-merch">
+                          <span class="checkbox-filters__control-mark"></span>
+                          <span class="checkbox-filters__control-label">Оранжевый</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                  <!--PERSONAL DATA FORMS-->
+                  <div class="order-forms__personal-data customer-data">
+                    <span class="customer-data__legend">ФИО</span>
+                    <ul class="customer-data__list">
+                      <li class="customer-data__item">
+                        <p class="customer-data__name-form enter-name-form">
+                          <span class="enter-name-form__legend">Имя:</span>
+                          <input class="enter-name-form__input" placeholder="Введите ваше имя*" type="text" name="enter-your-name">
+                        </p>
+                      </li>
+                      <li class="customer-data__item">
+                        <p class="customer-data__name-form enter-name-form--surname">
+                          <span class="enter-name-form__legend">Фамилия:</span>
+                          <input class="enter-name-form__input" placeholder="Укажите фамилию*" type="text" name="enter-your-surname">
+                        </p>
+                      </li>
+                      <li class="customer-data__item">
+                        <p class="customer-data__name-form enter-name-form--surname">
+                          <span class="enter-name-form__legend">Отчество:</span>
+                          <input class="enter-name-form__input" placeholder="Отчество, если желаете" type="text" name="enter-your-patronym">
+                        </p>
+                      </li>                      
+                    </ul>
+                  </div>
+                  <!--CUSTOMER CONTACTS-->
+                  <div class="order-forms__contacts customer-contacts">
+                    <ul class="customer-contacts__list">
+                      <li class="customer-contacts__item">
+                        <p class="customer-contacts__telephone-form customer-telephone">
+                          <span class="customer-telephone__legend legend">ТЕЛ</span>
+                          <input class="customer-telephone__input" placeholder="+7 ХХХ ХХХ ХХ ХХ*" type="tel" name="enter-your-telephone-number">
+                        </p>
+                      </li>
+                      <li class="customer-contacts__item">
+                        <p class="customer-contacts__telephone-form customer-email">
+                          <span class="customer-email__legend legend">E-mail</span>
+                          <input class="customer-email__input" placeholder="Ваш Email*" type="email" name="enter-your-email">
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--EXTRA - CUSTOMER'S INFORMATION-->
+                  <div class="order-forms__extra-information customer-comments-form">
+                    <span class="customer-comments-form__legend legend">ДОП</span>
+                    <textarea class="customer-comments-textarea" placeholder="Опишите все ваши пожелания к заказу" name="customer-comments-form" id="customer-comments-form" rows="7" cols="35"></textarea>
+                  </div>
+                  <span class="order-forms__attention-remark">*Поля обязательны для заполнения</span>
+                  <button class="order-forms__submit-button submit-button" type="submit">
+                    <span class="submit-buttom__text">ОТПРАВИТЬ ЗАКАЗ</span>
+                  </button>
+                </div>
+              </div>            
+            </form>
+          </section>
+      </main>
+      <footer class="main-footer">
+        <section class="social-media">
+          <div class="social-media__wrapper">
+            <h2 class="visually-hidden">Аккаунты Mishka в социальных сетях</h2>
+            <ul class="social-media__list">
+              <li class="social-media__item">
+                <span class="visually-hidden">Вконтакте</span>
+              </li>
+              <li class="social-media__item">
+                <span class="visually-hidden">Youtube</span>
+              </li>
+              <li class="social-media__item">
+                <span class="visually-hidden">Телеграм</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="webdeveloper-info">
+          <b class="wendeveloper-info__pointer">Разработано</b>
+          <svg width="27" height="35" viewBox="0 0 27 35" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6 0h-.1L0 1.4v24.7l13.5 8 13.4-8V1.4L13.6 0ZM25 12.1 13.5 5.3v-.1h-.1l-.1-.1v.1L1.9 12.1v-9l11.5-1.2L25 3.1v9ZM13.4 6.8l11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1L2 13.6l11.4-6.8ZM1.9 15.1l11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9L1.9 25v-9.9Z"/>
+          </svg>
+        </div>
+      </footer>
+
+  </body>
+</html>
