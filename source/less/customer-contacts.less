@@ -1,0 +1,36 @@
+.customer-contacts__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.customer-contacts__telephone-form,
+.customer-contacts__mail-form {
+    position: relative;
+}
+
+.customer-contacts__telephone-form::after {
+    width: 25px;
+    height: 24px;
+    content: "";
+    position: absolute;
+    top: 31.5px;
+    right: 7px;
+    background-image: url("../img/form/phone.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.customer-contacts__mail-form::after {
+    width: 32px;
+    height: 21px;
+    content: "";
+    position: absolute;
+    top: 36.5px;
+    right: 3px;
+    background-image: url("../img/form/mail.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    z-index: 3;
+}

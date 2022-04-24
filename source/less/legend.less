@@ -1,0 +1,21 @@
+.legend {
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #63D1BB;
+    text-transform: uppercase;
+    border-width: 0;
+    position: relative;
+}
+
+.legend::after {
+    min-width: 200px;
+    width: calc(50vw - 30px); //не понятно, должны ли линии тянуться на весь оставшийся экран
+    height: 1px;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 60px;
+    border-bottom: 1px solid #63D1BB;
+}

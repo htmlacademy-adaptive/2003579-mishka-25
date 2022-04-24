@@ -11,17 +11,105 @@
 }
 
 .advantages__title {
-    margin: 31px 30px 28px 30px;
+    margin: 31px 30px 82px 30px;
+    font-family: inherit;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000000;
+    text-align: left;
 }
 
 .advantages__list {
     padding: 0;
-    margin-left: 30px;
-    margin-right: 30px;
+    //margin-left: 30px;
+    //margin-right: 30px;
     margin-bottom: 58px;
     align-self: flex-start;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #000000;
+    list-style-type: none;
+}
+
+.advantages__item {
+    position: relative;
 }
 
 .advantages__item:not(:last-child) {
     margin-bottom: 83px;
+}
+
+.advantages__item--ecology::before {
+    width: 33px;
+    height: 38px;
+    position: absolute;
+    top: -54px;
+    left: 8px;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/index/flower.svg");
+    background-repeat: no-repeat;
+}
+
+.advantages__item--cheep::before {
+    width: 47px;
+    height: 27px;
+    position: absolute;
+    top: -53px;
+    left: 0px;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/index/scandi.svg");
+    background-repeat: no-repeat;
+}
+
+.advantages__item--likable::before {
+    width: 34px;
+    height: 27px;
+    position: absolute;
+    top: -48px;
+    left: 7px;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/index/heart.svg");
+    background-repeat: no-repeat;
+}
+
+.advantages__item--handmade::before {
+    width: 35px;
+    height: 34px;
+    position: absolute;
+    top: -51px;
+    left: 3px;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/index/clew.svg");
+    background-repeat: no-repeat;
+}
+
+.advantages__item--local::before {
+    width: 55px;
+    height: 23px;
+    position: absolute;
+    top: -49px;
+    left: -6px;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/index/rocket.svg");
+    background-repeat: no-repeat;
+}
+
+.advantages__item--present::before {
+    width: 33px;
+    height: 32px;
+    position: absolute;
+    top: -52px;
+    left: 3px;
+    content: "";
+    background-color: transparent;
+    background-image: url("../img/index/present.svg");
+    background-repeat: no-repeat;
 }

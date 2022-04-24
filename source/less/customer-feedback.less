@@ -1,14 +1,19 @@
 .customer-feedback {
+    max-width: 260px;
+    //margin-right: auto;
+    //margin-left: auto;
+    margin-bottom: 45px;
+    align-self: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 320px;
+    justify-content: stretch;
 }
 
-.customer-feedback__button {
+.customer-feedback__button { //кнопка не тянется
+    min-width: 175px;    
     box-sizing: border-box;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 45px;
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-basis: 260px;
+    flex-grow: 1;
+    max-width: 260px;
 }

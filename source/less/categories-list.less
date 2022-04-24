@@ -1,17 +1,65 @@
+.categories-list {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
 .categories-list__item {
-    background-color: #63D1BB;
+    min-width: 320px;
+    height: 103px;
+    background-color: #63D1BB;   
+    position: relative;
 }
 
 .categories-list__item--secondary {
+    min-width: 320px;
+    height: 103px;
     background-color: #56C3B2;
+    position: relative;
 }
 
 .categories-list__link {
     display: block;
-    text-decoration: none;
-    text-align: left;
-    color: #FFFFFF;
+    width: 130px;
     padding-top: 24px;
     padding-bottom: 31px;
     padding-left: 30px;
+    text-decoration: none;
+    text-align: left;
+    color: #FFFFFF;    
+}
+
+.categories-list__item::after {
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    top: 23px;
+    right: 36px;
+    content: "";  
+    background-image: url("../img/index/interior.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.categories-list__item--secondary::after {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 21px;
+    right: 27px;
+    content: "";  
+    background-image: url("../img/index/toy-svg.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    z-index: 3;
 }
