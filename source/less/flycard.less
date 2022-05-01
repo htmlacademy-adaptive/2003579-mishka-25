@@ -9,22 +9,50 @@
 .flycard__wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
     //align-items: center;
 }
 
+.flycard__titles-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
 .flycard__title {
+    padding: 0;
+    margin: 0;
     margin-bottom: 3.5px;
+    font-family: inherit;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000000;    
     text-align: left;
 }
 
 .flycard__subtitle {
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
     text-align: left;
     text-transform: uppercase;
     color: #63D1BB;
 }
 
+.flycard__inner-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
 .flycard__description {
+    padding: 0;
+    margin: 0;
     margin-bottom: 28px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    color: #444444;    
 }
 
 .flycard__list {
@@ -36,6 +64,11 @@
     margin-bottom: 25.5px;
     display: block;
     align-self: center;
+}
+
+.flycard__price-button-wrap {
+    display: flex;
+    flex-direction: column;
 }
 
 .flycard__price {
@@ -59,7 +92,165 @@
     position: absolute;
     bottom: 0;
     content: "";
-    background-image: url("../img/index/zigzag-line-desktop.svg");
+    background-image: url("../img/index/zigzag-line-mobile.svg");
     background-repeat: repeat-x;
     z-index: 3;
+}
+
+@media (max-width: @mobile-width) {
+    .flycard__subtitle {
+        padding-bottom: 17.5px;
+    }
+
+}
+
+@media (min-width: @tablet-width) {
+    .flycard::after {
+        width: 100%;
+        height: 17px;
+        position: absolute;
+        bottom: -17px;
+        content: "";
+        background-image: url("../img/index/zigzag-line-tablet.svg");
+        background-repeat: repeat-x;
+        z-index: 3;
+    }
+
+    .flycard__wrapper {
+        margin-bottom: 52px;
+    }
+
+    .flycard__title {
+        font-size: 43px;
+        line-height: 50px;
+    }
+
+    .flycard__titles-wrap {
+        min-width: 668px;
+        flex-direction: row;
+        //flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 46px;
+        margin-bottom: 37.5px;
+    }
+
+    .flycard__subtitle {
+        line-height: 17px;
+        max-width: 100px;
+        text-align: center;
+    }
+
+    .flycard__inner-wrap {
+        display: grid;
+        min-width: 668px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        //grid-template-rows: 138px 138px 138px;
+    }
+
+    .flycard__description {
+        font-size: 17px;
+        line-height: 30px;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        padding-right: 42px;
+        margin-bottom: 0;
+    }
+
+    .flycard__image {
+        width: 334px;
+        height: 404px;
+        grid-row: 1/4;
+        grid-column: 2/3;
+        padding-top: 13px;
+        margin-bottom: 0;
+    }
+
+    .flycard__list {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        padding-right: 42px;
+        margin: 0;
+    }
+
+    .flycard__price-button-wrap {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        align-self: end;
+        //padding-top: 28px;
+        padding-right: 42px;
+    }
+
+    .flycard__price {
+        margin-bottom: 33px;
+    }
+
+    .flycard__order-button {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .flycard::after {
+        width: 100%;
+        height: 23px;
+        position: absolute;
+        bottom: -17px;
+        content: "";
+        background-image: url("../img/index/zigzag-line-tablet.svg");
+        background-repeat: repeat-x;
+        z-index: 3;
+    }
+
+    .flycard__wrapper {
+        max-width: 1050px;
+        //padding-top: 54px; //проверить отступ у блока выше!!!!!
+        margin-bottom: 73px;
+    }
+
+    .flycard__inner-wrap {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 0.72fr 0.89fr;
+        //box-sizing: border-box;
+        //padding-left: 175px;
+        //padding-top: 54px;
+    }
+
+    .flycard__list {
+        padding-left: 175px;
+    }
+
+    .flycard__price-button-wrap {
+        padding-left: 175px;
+    }
+
+    .flycard__description {
+        padding-left: 175px;
+        padding-top: 153px;
+    }
+
+    .flycard__image {
+        width: 525px;
+        height: 636px;
+        padding: 0;
+    }    
+
+    .flycard__titles-wrap {
+        max-width: 1050px;
+        justify-content: flex-start;
+        position: absolute;
+        content: "";
+        left: 47px;
+        //top: 69px;
+        bottom: 518px;
+    }
+
+    .flycard__title {
+        max-width: 700px;
+    }
+
+    .flycard__subtitle {
+        padding-right: 43px;
+        order: -1;
+    }
 }

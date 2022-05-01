@@ -4,3 +4,21 @@
     align-items: center;
     background-color: #F1F1F1;
 }
+
+.main-footer__logo {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .main-footer__logo {
+        display: block;
+        fill: #000000;
+    }
+
+    .main-footer {
+        min-width: 668px;
+        padding: 51px 50px 58px 50px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

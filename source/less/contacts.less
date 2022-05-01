@@ -5,7 +5,10 @@
 }
 
 .contacts__title {
-    margin: 28px 30px;
+    margin: 0;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-bottom: 28px;
     font-family: inherit;
     font-size: 25px;
     font-weight: 700;
@@ -19,8 +22,6 @@
 }
 
 .contacts__list {
-     margin-left: 30px;
-    margin-right: 30px;
     margin-bottom: 34px;
     list-style-type: none;
 }
@@ -35,18 +36,19 @@
     justify-content: center;
 }
 
-.contacts__map {
+.contacts__map-wrap {
     display: block;
     align-self: center;
-    margin-bottom: 42px;    
+    margin-bottom: 42px;
+    border-width: 0;   
 }
 
 .contacts__open-feedback-window {
-    max-width: 260px;
+    min-width: 260px;
     padding: 16px;
     margin-left: 30px;
     margin-right: 30px;
-    margin-bottom: 55px;
+    //margin-bottom: 55px;
     align-self: center; //не тянется кнопка
 }
 
@@ -64,4 +66,99 @@
     font-weight: 400;
     line-height: 30px;
     color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+    .contacts__wrapper {
+        min-width: 768px;
+        position: relative;
+    }
+
+    .contacts__title {
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-top: 22px;
+        font-size: 43px;
+        line-height: 50px;
+    }
+
+    .contacts__list {
+        margin-bottom: 49px;
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    .contacts__open-feedback-window {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .contacts__map-wrap {
+        margin-bottom: 55px;
+    }
+
+    .contacts__open-feedback-window {
+        width: 230px;
+    }
+
+    .contacts__wrapper::after {
+        position: absolute;
+        top: 0;
+        right: 53px;
+        content: "";
+        width: 47px;
+        height: 81px;
+        background-image: url("../img/index/flag.svg");
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .contacts__wrapper {
+        width: 988px;
+        margin-left: 63px;
+        display: grid;
+        grid-template-columns: 111px 360px 527px;
+        grid-template-rows: 136px 185px 136px;
+    }
+
+    .contacts__title {
+        margin: 0;
+        margin-top: 79px;
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: 53px;
+        line-height: 57px;
+    }
+
+    .contacts__list {
+        margin-bottom: 0;
+        margin-top: 35px;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: 2/3;
+        grid-row: 2/3;        
+    }
+
+    .contacts__open-feedback-window {
+       margin: 0;
+       margin-top: 84px;
+       grid-column: 2/3;
+       grid-row: 3/4;
+    }
+
+    .contacts__map-wrap {
+        margin: 0;
+        grid-column: 3/4;
+        grid-row: 1/4;
+    }
+
+    .contacts__wrapper::after {
+        position: absolute;
+        top: 62px;
+        left: 0;
+        content: "";
+        width: 47px;
+        height: 81px;
+        background-image: url("../img/index/flag.svg");
+    }
 }

@@ -1,7 +1,6 @@
 .advantages {
     display: flex;
     justify-content: center;
-    min-width: 320px;
 }
 
 .advantages__wrapper {
@@ -11,7 +10,9 @@
 }
 
 .advantages__title {
-    margin: 31px 30px 82px 30px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 82px;
     font-family: inherit;
     font-size: 25px;
     font-weight: 700;
@@ -22,9 +23,7 @@
 
 .advantages__list {
     padding: 0;
-    //margin-left: 30px;
-    //margin-right: 30px;
-    margin-bottom: 58px;
+    //margin-bottom: 58px;
     align-self: flex-start;
     font-family: inherit;
     font-size: 17px;
@@ -112,4 +111,70 @@
     background-color: transparent;
     background-image: url("../img/index/present.svg");
     background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+    .advantages__wrapper {
+        min-width: 668px;
+    }
+
+    .advantages__title {
+        //margin-top: 56px;
+        font-size: 43px;
+        line-height: 50px;
+    }
+
+    .advantages__list {
+        display: grid;
+        max-width: 700px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 0;
+    }
+
+    .advantages__item--ecology {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding-right: 95px;
+    }
+
+    .advantages__item--cheep {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding-right: 95px;
+    }
+
+    .advantages__item--likable {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        padding-right: 95px;
+    }
+
+    .advantages__item--handmade {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .advantages__item--local {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .advantages__item--present {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .advantages__title {
+        font-size: 43px;
+        line-height: 50px;
+    }
+
+    .advantages__item--ecology,
+    .advantages__item--cheep,
+    .advantages__item--likable {
+        padding-right: 110px;
+    }
 }
