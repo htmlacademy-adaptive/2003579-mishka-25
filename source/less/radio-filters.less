@@ -1,5 +1,6 @@
 .radio-filters__group {
     padding: 0;
+    margin: 0;
     border-width: 0;
 }
 
@@ -62,4 +63,38 @@
 .radio-filters__control-label {
     display: block;
     max-width: 200px;
+}
+
+@media (min-width: @tablet-width)  {
+    .radio-filters__group {
+        padding-left: 217px;
+        padding-right: 50px;
+        position: relative;
+        //display: flex;
+        //justify-content: flex-start;
+        //flex-direction: row;
+    }
+
+    .radio-filters__list {
+        margin: 0;
+    }
+
+    .radio-filters__control-label {
+        max-width: 370px;
+    }
+
+    .radio-filters__item {
+        margin-bottom: 58.2px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .radio-filters__group {
+        padding-left: 225px;
+        padding-right: 100px;
+    }
+
+    .radio-filters__control-label {
+        max-width: 745px;
+    }
 }
