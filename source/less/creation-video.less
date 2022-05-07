@@ -37,6 +37,8 @@
     min-width: 260px;
     padding-top: 58%;
     position: relative;
+    display: block;
+    background-color: #EFEFEF;
     //background-color: red;
 }
 
@@ -49,6 +51,7 @@
     width: 100%;
     min-width: 258px;
     height: 100%;
+    display: block;
     //min-height: 150px;
     //align-self: center;
 }
@@ -73,6 +76,10 @@
     margin-left: 34px;
     margin-right: 34px;
     margin-bottom: 41px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #444444;
 }
 
 .creation-video__order-button {
@@ -81,4 +88,52 @@
     margin-bottom: 33px;
     min-width: 192px;
     padding: 18px 11px;
+}
+
+@media (min-width: @tablet-width) {
+    .creation-video__box {
+        order: -1;
+    }
+
+    .creation-video__title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .creation-video__description {
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .creation-video {
+        width: 1050px;
+        display: grid;
+        grid-template-columns: 2.36fr 1fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 80px;
+    }
+
+    .creation-video__box {
+        grid-column: 1/2;
+        grid-row: 1/4;
+        width: 100%;
+    }
+
+    .creation-video__title {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .creation-video__description {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .creation-video__order-button {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        align-self: end;
+    }
 }

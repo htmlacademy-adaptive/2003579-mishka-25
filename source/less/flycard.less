@@ -102,6 +102,9 @@
         padding-bottom: 17.5px;
     }
 
+    .flycard__price-button-wrap {
+        order: 2;
+    }
 }
 
 @media (min-width: @tablet-width) {
@@ -144,7 +147,8 @@
         display: grid;
         min-width: 668px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        //grid-template-rows: 1fr 1fr 1fr;
         //grid-template-rows: 138px 138px 138px;
     }
 

@@ -3,6 +3,7 @@
     flex-direction: column;
     //align-items: center;
     min-width: 320px;
+    background-color: #F9F9F9;
 }
 
 .main-categories__wrapper {
@@ -32,18 +33,24 @@
     .main-categories__wrapper {
         min-height: 758px;
         background-position: top 0 right 0;
+        //position: relative;
+    }
+
+    .main-categories {
         position: relative;
     }
 
-    .main-categories__wrapper::after {
+    .main-categories::after {
         height: 24px;
-        width: 100vh;
+        //width: 100vh;
+        width: 100%;
         background-image: url("../img/index/zigzag-fill-medium.png");
         background-repeat: repeat-x;
         position: absolute;
         bottom: 0;
         //left: -50%;
         content: "";
+        z-index: 3;
     }
 
     .main-categories__title {
@@ -58,15 +65,17 @@
         background-position: top 25% right 0 ;
     }
 
-    .main-categories__wrapper::after {
+    .main-categories::after {
         height: 34px;
-        width: 100vh;
+        //width: 100vh;
+        width: 100%;
         background-image: url("../img/index/zigzag-fill-large.png");
         background-repeat: repeat-x;
         position: absolute;
         bottom: 0;
-        //left: -50%;
+        left: 0;
         content: "";
+        z-index: 3;
     }
 
     .main-categories__title {
