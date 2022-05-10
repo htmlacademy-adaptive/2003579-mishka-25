@@ -19,3 +19,24 @@
     left: 60px;
     border-bottom: 1px solid #63D1BB;
 }
+
+@media (min-width: @tablet-width) {
+    .legend::after {
+        display: none;
+    }
+
+    .legend {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        height: min-content;
+        width: min-content;
+        content: "";
+    }  
+}
+
+@media (min-width: @desktop-width) {
+    .legend {
+        left: 100px;
+    }
+}

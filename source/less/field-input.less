@@ -21,9 +21,25 @@
 
 .field-input::placeholder,
 .field-input--textarea::placeholder {
+    padding: 14px 17px 14px 20px;
     font-family: 'Open Sans';
     font-size: 17px;
     font-weight: 400;
     line-height: 18px;
     color: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+
+    .field-input::placeholder,
+    .field-input--textarea::placeholder {
+        font-size: 19px;
+        line-height: 18px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .field-input {
+        max-width: 700px;
+    }
 }

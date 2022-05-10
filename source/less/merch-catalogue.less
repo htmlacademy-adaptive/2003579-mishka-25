@@ -1,9 +1,26 @@
 .merch-catalogue__list {
     padding: 0;
-    margin: 0;
     list-style-type: none;
 }
 
 .merch-catalogue__item {
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: @mobile-width) {
+    .merch-catalogue__list {
+        margin: 0;
+    }
+
+}
+
+@media (min-width: @desktop-width) {
+    .merch-catalogue__list {
+        display: flex;
+        width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

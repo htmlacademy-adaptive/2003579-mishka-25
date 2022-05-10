@@ -1,5 +1,8 @@
 .main-header {
     min-width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
 }
 
 .main-header__logo {
@@ -7,4 +10,65 @@
     padding-bottom: 22px;
     display: flex;
     justify-content: center;
+}
+
+.main-header__logo-image {
+    display: block;
+    fill: #000000;
+}
+
+.main-header__logo-image--black-back {
+    display: none;
+}
+
+.main-header__logo-image--black-splat {
+    display: none;
+}
+
+@media (min-width: @tablet-width) {
+    .main-header {
+        box-shadow: 0px 1px 0px #ECECEC;
+    }
+
+    .main-header__logo {
+        //padding-top: 24px;  ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
+        //padding-bottom: 20px;  ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
+        display: flex;
+        justify-content: flex-start;
+    }    
+
+    /*.main-header__logo-image {
+        display: none;
+    }
+
+    .main-header__logo-image--black-back {   ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
+        display: block;
+        fill: #FFFFFF;
+    }
+
+    .main-header__logo-image--black-splat {
+        display: none;
+    }*/ 
+}
+
+@media (min-width: @desktop-width) {
+    .main-header__logo {
+        //padding-top: 9px;  ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
+        //padding-bottom: 13.5px;  ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
+        display: flex;
+        justify-content: flex-start;
+    }    
+
+    /*.main-header__logo-image {
+        display: none;
+    }
+
+    .main-header__logo-image--black-back { ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
+        display: none;
+    }
+
+    .main-header__logo-image--black-splat {
+        display: block;
+        fill: #FFFFFF;
+    }*/
 }

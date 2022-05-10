@@ -11,6 +11,7 @@
     font-weight: 700;
     line-height: 24px;
     color: #FFFFFF;
+    list-style-type: none;
 }
 
 .categories-list__item {
@@ -62,4 +63,30 @@
     background-color: transparent;
     background-repeat: no-repeat;
     z-index: 3;
+}
+
+@media (min-width: @tablet-width) {
+    .categories-list {
+        min-width: 668px;
+        margin-right: 50px;
+        margin-left: 50px;
+        justify-self: stretch;
+        flex-direction: row;        
+    }
+    
+    .categories-list__item {
+        min-width: 334px;
+        height: 119px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .categories-list {
+        width: 1050px;
+    }
+
+    .categories-list__item {
+        min-width: 525px;
+    }
+
 }

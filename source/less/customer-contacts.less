@@ -4,12 +4,13 @@
     list-style-type: none;
 }
 
-.customer-contacts__telephone-form,
-.customer-contacts__mail-form {
+.customer-contacts__form {
+    padding: 0;
+    margin: 0;
     position: relative;
 }
 
-.customer-contacts__telephone-form::after {
+.customer-contacts__form--telephone::after {
     width: 25px;
     height: 24px;
     content: "";
@@ -22,7 +23,7 @@
     z-index: 3;
 }
 
-.customer-contacts__mail-form::after {
+.customer-contacts__form--mail::after {
     width: 32px;
     height: 21px;
     content: "";
@@ -33,4 +34,62 @@
     background-repeat: no-repeat;
     background-color: transparent;
     z-index: 3;
+}
+
+@media (max-width: @mobile-width) {
+    .customer-contacts__form {
+        margin-bottom: 34.5px;
+    }
+
+}
+
+@media (min-width: @tablet-width) {
+    .customer-contacts__form {
+        display: block;
+        margin-bottom: 24px;
+        width: 100%;
+        min-width: 501px;
+        max-width: 700px;
+    }
+
+    .customer-contacts__item {
+        display: flex;
+    }
+
+    .customer-contacts__list {
+        display: block;
+        padding-left: 217px;
+        padding-right: 50px;
+        margin-top: 50px;
+        margin-bottom: 26px;
+        position: relative;
+    }
+
+     .customer-contacts__form--telephone::after {
+        top: 11px;
+        right: 26px;       
+    }
+
+    .customer-contacts__form--mail::after {
+        top: 16px;
+        right: 22px;
+    }
+
+    .customer-contacts__legend {
+        width: 100px;
+        top: 15px;
+        left: -167px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+
+    .customer-contacts__list {
+        padding-left: 225px;
+        padding-right: 100px;
+    }
+
+    .customer-contacts__legend {
+        left: -128px;
+    }
 }

@@ -13,5 +13,47 @@
     padding-top: 28.5px;
     padding-bottom: 26.5px;
     display: block;
-    align-self: center; 
+    align-self: center;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 1px 0px #ECECEC, inset 0px 1px 0px #ECECEC;
+}
+
+@media (min-width: @tablet-width) {
+    .site-tree-list {
+        min-width: 334px;
+        min-height: 46px;
+        position: absolute;
+        left: 50px;
+        bottom: -70px;
+        content: "";
+        background-color: transparent;    
+    }
+
+    .site-tree-list__link {
+        padding-right: 36px;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .site-tree-list {
+        min-width: 405px;
+        position: static;
+    }
+
+    .site-tree-list__item:not(:first-child) a {
+        padding-left: 35px;
+    }
+
+    .site-tree-list__item:not(:last-child) {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
 }
