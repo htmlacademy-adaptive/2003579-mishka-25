@@ -74,9 +74,16 @@
       <ul class="merch-catalogue__list">
         <li class="merch-catalogue__item catalogue-flycard">
           <a class="catalogue-flycard__link" href="#">
-            <img class="catalogue-flycard__image" src="img/catalog/rabbit.jpg" width="260" height="195" alt="Фотография вязаного зайца в голубом костюме.">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/rabbit-desktop@1x.jpg 1x, img/content/rabbit-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/content/rabbit-tablet@1x.jpg 1x, img/content/rabbit-tablet@2x.jpg 2x">
+              <img class="catalogue-flycard__image" src="img/content/rabbit-mobile@1x.jpg"
+              srcset="img/content/rabbit-mobile@1x.jpg 1x, img/content/rabbit-mobile@2x.jpg 2x"
+              alt="Фотография вязаного зайца в голубом костюме.">
+            </picture>
+            <!--<img class="catalogue-flycard__image" src="img/catalog/rabbit.jpg" width="260" height="195" alt="Фотография вязаного зайца в голубом костюме.">-->
           </a>
-          <div class="catalogue-flycard__decription-price-container">
+          <div class="catalogue-flycard__description-price-container">
             <h3 class="catalogue-flycard__title">Зайчик-попрыгайчик</h3>
             <span class="catalogue-flycard__description">Рост 30 см, вес 200 г</span>
             <div class="catalogue-flycard__price-wrap">
@@ -92,9 +99,16 @@
         </li>
         <li class="merch-catalogue__item catalogue-flycard">
           <a class="catalogue-flycard__link" href="#">
-            <img class="catalogue-flycard__image" src="img/catalog/cloth-organiser.jpg" width="260" height="195" alt="Фотография вязаного зайца в голубом костюме.">
+            <!--<img class="catalogue-flycard__image" src="img/catalog/cloth-organiser.jpg" width="260" height="195" alt="Фотография вязаного органайзера для настольных салфеток.">-->
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/cloth-organizer-desktop@1x.jpg 1x, img/content/cloth-organizer-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/content/cloth-organizer-tablet@1x.jpg 1x, img/content/cloth-organizer-tablet@2x.jpg 2x">
+              <img class="catalogue-flycard__image" src="img/content/cloth-organizer-mobile@1x.jpg"
+              srcset="img/content/cloth-organizer-mobile@1x.jpg 1x, img/content/cloth-organizer-mobile@2x.jpg 2x"
+              alt="Фотография вязаного органайзера для настольных салфеток.">
+            </picture>
           </a>
-          <div class="catalogue-flycard__decription-price-container">
+          <div class="catalogue-flycard__description-price-container">
             <h3 class="catalogue-flycard__title">Корзинка для белья</h3>
             <span class="catalogue-flycard__description">Диаметр 15 см, высота 10 см</span>
             <div class="catalogue-flycard__price-wrap">
@@ -110,10 +124,18 @@
         </li>
         <li class="merch-catalogue__item catalogue-flycard">
           <a class="catalogue-flycard__link" href="#">
-            <img class="catalogue-flycard__image" src="img/catalog/toys-organiser-big.jpg" width="260" height="195" alt="Фотография вязаного зайца в голубом костюме.">
+            <!--<img class="catalogue-flycard__image" src="img/catalog/toys-organiser-big.jpg" width="260" height="195" alt="Фотография вязаной корзины-органайзера для хранения игрушек.">-->
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/content/toys-organizer-desktop@1x.jpg 1x, img/content/toys-organizer-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/content/toys-organizer-tablet@1x.jpg 1x, img/content/toys-organizer-tablet@2x.jpg 2x">
+              <img class="catalogue-flycard__image" src="img/content/toys-organizer-mobile@1x.jpg"
+              srcset="img/content/toys-organizer-mobile@1x.jpg 1x, img/content/toys-organizer-mobile@2x.jpg 2x"
+              alt="Фотография вязаной корзины-органайзера для хранения игрушек.">
+            </picture>
           </a>
-          <div class="catalogue-flycard__decription-price-container">
-            <h3 class="catalogue-flycard__title">Большая корзинка для игрушек</h3>
+          <div class="catalogue-flycard__description-price-container">
+            <h3 class="catalogue-flycard__title">Большая корзинка<br>
+              для игрушек</h3>
             <span class="catalogue-flycard__description">Диаметр 30 см, высота 30 см</span>
             <div class="catalogue-flycard__price-wrap">
               <b class="catalogue-flycard__price">1 500 руб.</b>
