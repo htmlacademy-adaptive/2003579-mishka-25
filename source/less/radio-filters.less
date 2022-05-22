@@ -67,6 +67,7 @@
 
 @media (min-width: @tablet-width)  {
     .radio-filters__group {
+        box-sizing: border-box;
         padding-left: 217px;
         padding-right: 50px;
         position: relative;
@@ -77,6 +78,8 @@
 
     .radio-filters__list {
         margin: 0;
+        font-size: 19px;
+        line-height: 18px;
     }
 
     .radio-filters__control-label {
@@ -90,11 +93,30 @@
 
 @media (min-width: @desktop-width) {
     .radio-filters__group {
-        padding-left: 225px;
-        padding-right: 100px;
+        width: 1150px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 6px;
+        padding-left: 96px;
+        padding-right: 96px;
+    }
+
+    .radio-filters__list {
+        padding-left: 129px;
+    }
+
+    .radio-filters__item {
+        margin-left: 80px;
     }
 
     .radio-filters__control-label {
         max-width: 745px;
+    }
+
+    .radio-filters__control-mark {
+        width: 44px;
+        height: 44px;
+        top: -17px;
+        left: -78px;
     }
 }

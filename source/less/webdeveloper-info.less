@@ -1,8 +1,14 @@
 .webdeveloper-info {
     display: flex;
     justify-content: center;
-    margin-top: 22px;
-    margin-bottom: 30px;
+    //margin-top: 22px;
+    //margin-bottom: 30px;
+    padding-top: 22px;
+    padding-bottom: 30px;
+}
+
+.webdeveloper-info__link {
+    text-decoration: none;
 }
 
 .webdeveloper-info__pointer {
@@ -12,7 +18,7 @@
     font-weight: 700;
     line-height: 18px;
     color: #000000;
-    text-transform: uppercase;
+    //text-transform: uppercase;
 }
 
 .webdeveloper-info__icon {
@@ -21,6 +27,13 @@
 
 @media (min-width: @tablet-width) {
     .webdeveloper-info {
-        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .webdeveloper-info__pointer {
+        margin-right: 24px;
+        vertical-align: 50%;
     }
 }

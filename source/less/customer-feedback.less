@@ -10,9 +10,16 @@
 .customer-feedback__button { //кнопка не тянется
     min-width: 175px;    
     box-sizing: border-box;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     flex-basis: 260px;
     flex-grow: 1;
     max-width: 260px;
+}
+
+@media (min-width: @desktop-width) {
+    .customer-feedback__button {
+        flex-basis: 175px;
+    }
+
 }

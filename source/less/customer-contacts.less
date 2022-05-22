@@ -83,13 +83,24 @@
 }
 
 @media (min-width: @desktop-width) {
-
     .customer-contacts__list {
+        width: 1150px;
+        box-sizing: border-box;
         padding-left: 225px;
-        padding-right: 100px;
+        padding-right: 225px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .customer-contacts__legend {
-        left: -128px;
+        left: -115px;
+    }
+
+    .customer-contacts__form--telephone::after {
+        right: 6px;
+    }
+
+    .customer-contacts__form--mail::after {
+        right: 5px;
     }
 }

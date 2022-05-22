@@ -60,6 +60,7 @@
 
 @media (min-width: @tablet-width)  {
     .checkbox-filters__group {
+        box-sizing: border-box;
         padding-left: 252px;
         padding-right: 50px;
         position: relative;
@@ -75,6 +76,8 @@
         margin-top: 50px;
         flex-direction: row;
         flex-wrap: wrap;
+        font-size: 19px;
+        line-height: 18px;
     }
 
     .checkbox-filters__legend {
@@ -84,11 +87,28 @@
 
 @media (min-width: @desktop-width) {
     .checkbox-filters__group {
-        padding-left: 260px;
-        padding-right: 100px;
+        width: 1150px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 96px;
+        padding-right: 96px;
     }
 
     .checkbox-filters__item {
-        margin-bottom: 57px;
+        width: 180px;
+        margin-left: 82px;
+        margin-bottom: 57px;        
+    }
+
+    .checkbox-filters__list {
+        padding-left: 129px;
+        margin-top: 68px;
+    }
+
+    .checkbox-filters__control-mark {
+        width: 48px;
+        height: 48px;
+        top: -16px;
+        left: -82px;    
     }
 }
