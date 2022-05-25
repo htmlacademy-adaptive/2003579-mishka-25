@@ -46,14 +46,14 @@ const images = () => {
   pipe(gulp.dest('build/img'))
 }
 
-export const copyImages = () => {
+const copyImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
   pipe(gulp.dest('build/img'))
 }
 
 //Webp
 
-export const createWebp = () => {
+const createWebp = () => {
   return gulp.src('source/ing/**/*.{jpg, png}')
   pipe(squoosh( {
     webp: {}
@@ -96,6 +96,11 @@ const copy = (done) => {
   done();
 }
 
+//Clean
+const clean = () => {
+  return delete('build');
+};
+
 // Server
 
 const server = (done) => {
@@ -110,14 +115,51 @@ const server = (done) => {
   done();
 }
 
+//Reload
+
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
+  gulp.watch('source/js/script.js', gulp.series(scripts))
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
+//Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+);
+
 
 export default gulp.series(
-  html, styles, server, watcher
-);
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel (
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
