@@ -1,5 +1,5 @@
 .customer-feedback {
-    max-width: 260px;
+    width: 260px;
     //margin-right: auto;
     //margin-left: auto;
     align-self: center;
@@ -17,9 +17,19 @@
     max-width: 260px;
 }
 
-@media (min-width: @desktop-width) {
-    .customer-feedback__button {
-        flex-basis: 175px;
+@media(min-width: @tablet-width) {
+    .customer-feedback {
+        width: 175px;
     }
 
+    .customer-feedback__button {
+        width: 175px;
+    }
 }
+
+//@media (min-width: @desktop-width) {
+//    .customer-feedback__button {
+//        flex-basis: 175px;
+//    }
+
+//}

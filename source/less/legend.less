@@ -11,13 +11,19 @@
 
 .legend::after {
     min-width: 200px;
-    width: calc(50vw - 30px); //не понятно, должны ли линии тянуться на весь оставшийся экран
+    width: calc(50vw - 30px);
     height: 1px;
     content: "";
     position: absolute;
     top: 8px;
     left: 60px;
     border-bottom: 1px solid #63D1BB;
+}
+
+.legend--mail::after {
+    min-width: 180px;
+    width: calc(50vw - 50px);
+    left: 80px;
 }
 
 @media (min-width: @tablet-width) {
@@ -32,11 +38,23 @@
         height: min-content;
         width: min-content;
         content: "";
-    }  
+    }
+
+    .legend--personal {
+        top: 20px;
+    }
+
+    .legend--extra {
+        top: 20px;
+    }
 }
 
 @media (min-width: @desktop-width) {
     .legend {
+        left: 110px;
+    }
+
+    .legend--extra {
         left: 110px;
     }
 }

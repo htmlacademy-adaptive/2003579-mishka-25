@@ -7,6 +7,7 @@
 
 .catalogue-flycard__description-price-container {
     padding: 28px;
+    padding-top: 25px;
     box-sizing: border-box;
     border: 1px solid #ECECEC;
 }
@@ -23,7 +24,7 @@
     //max-width: 200px;
     padding: 0;
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
     font-family: inherit;
     font-size: 17px;
     font-weight: 700;
@@ -36,7 +37,7 @@
     max-width: 215px;
     padding: 0;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     display: block;
     font-family: inherit;
     font-size: 13px;
@@ -50,6 +51,12 @@
     display: flex;
     justify-content: space-between;
     border-top: 1px solid #ECECEC;
+}
+
+.catalogue-flycard__price {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
 }
 
 .catalogue-flycard__add-to-cart-button {
@@ -66,17 +73,20 @@
         flex-direction: row;
         min-width: 668px;
         width: calc(100% - 100px);
+        margin-bottom: 53px;
     }
 
     .catalogue-flycard__title {
         font-size: 20px;
         line-height: 24px;
-        margin-bottom: 15px;
+        margin-bottom: 6px;
     }
 
     .catalogue-flycard__description-price-container {
         display: flex;
         flex-direction: column;
+        padding-left: 33px;
+        padding-bottom: 26px;
     }
 
     .catalogue-flycard__description {
@@ -103,6 +113,11 @@
         margin-bottom: 0;
         justify-self: flex-end;
     }
+
+    .catalogue-flycard__price {
+        font-size: 17px;
+        line-height: 24px;
+    }
 }
 
 @media (min-width: @desktop-width) {
@@ -115,7 +130,7 @@
     }
 
     .catalogue-flycard__title {
-        margin-bottom: 2px;
+        margin-bottom: 7px;
     }
 
     .catalogue-flycard__image {
@@ -134,6 +149,7 @@
         min-width: 316px;
         width: 316px;
         height: 197px;
+        padding-left: 29px;
     }
 
     .catalogue-flycard__description {
