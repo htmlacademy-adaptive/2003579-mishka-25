@@ -1,18 +1,25 @@
 .webdeveloper-info {
     display: flex;
     justify-content: center;
-    margin-top: 22px;
-    margin-bottom: 30px;
+    //margin-top: 22px;
+    //margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.webdeveloper-info__link {
+    text-decoration: none;
 }
 
 .webdeveloper-info__pointer {
-    margin-right: 27px;
+    margin-right: 24px;
     font-family: inherit;
     font-size: 19px;
     font-weight: 700;
     line-height: 18px;
     color: #000000;
-    text-transform: uppercase;
+    vertical-align: 65%;
+    //text-transform: uppercase;
 }
 
 .webdeveloper-info__icon {
@@ -21,6 +28,11 @@
 
 @media (min-width: @tablet-width) {
     .webdeveloper-info {
-        margin: 0;
+        padding: 0;
+    }
+
+    .webdeveloper-info__pointer {
+        margin-right: 24px;
+        vertical-align: 50%;
     }
 }

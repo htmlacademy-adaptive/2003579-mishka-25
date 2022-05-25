@@ -8,7 +8,7 @@
     padding: 0;
     margin: 0;
     margin-top: 35px;
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     font-family: inherit;
@@ -32,8 +32,8 @@
     position: absolute;
     top: -10px;
     left: -61px;
-    width: 38px;
-    height: 38px;
+    width: 35px;
+    height: 35px;
     border: 2px solid #444444;
 }
 
@@ -53,42 +53,76 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url("../img/form/tick.svg");
+    background-image: url("../img/decorative/tick.svg");
     background-repeat: no-repeat;
     z-index: 3;
 }
 
 @media (min-width: @tablet-width)  {
     .checkbox-filters__group {
-        padding-left: 252px;
-        padding-right: 50px;
+        box-sizing: border-box;
+        padding-left: 217px;
+        padding-right: 30px;
         position: relative;
     }
 
     .checkbox-filters__item {
         width: 205px;
-        margin-left: 30px;
+        box-sizing: border-box;
+        padding-left: 25px;
+        margin-left: 55px;
+        margin-right: 0;
         margin-bottom: 60px;
     }
 
     .checkbox-filters__list {
-        margin-top: 50px;
+        width: 100%;
+        margin-top: 65px;
+        margin-bottom: 5px;
         flex-direction: row;
         flex-wrap: wrap;
+        font-size: 19px;
+        line-height: 18px;
     }
 
     .checkbox-filters__legend {
         padding-top: 66px;
     }
+
+    .checkbox-filters__control-mark {
+        width: 50px;
+        height: 50px;
+        top: -13px;
+        left: -80px;    
+    }
 }
 
 @media (min-width: @desktop-width) {
     .checkbox-filters__group {
-        padding-left: 260px;
-        padding-right: 100px;
+        width: 1150px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 96px;
+        padding-right: 96px;
     }
 
     .checkbox-filters__item {
-        margin-bottom: 57px;
+        width: 180px;
+        margin-left: 82px;
+        margin-bottom: 57px;        
+    }
+
+    .checkbox-filters__list {
+        box-sizing: border-box;
+        padding-left: 105px;
+        margin-top: 68px;
+        margin-bottom: 10px;
+    }
+
+    .checkbox-filters__control-mark {
+        width: 48px;
+        height: 48px;
+        top: -16px;
+        left: -82px;    
     }
 }

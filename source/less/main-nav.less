@@ -4,7 +4,19 @@
     position: relative;
     min-width: 320px;
     width: 100%;
+    z-index: 10;
+}
 
+.main-nav--opened .main-nav__toggle-button {
+    background-image: url("../img/index/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-nav--closed .main-nav__toggle-button {
+    background-image: url("../img/index/menu-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main-nav--active {
@@ -19,9 +31,13 @@
 
 .main-nav__toggle {
     position: absolute;
-    top: 32px;
-    right: 31px;
+    top: 22px;
+    right: 33px;
     //justify-self: flex-end;
+}
+
+.main-nav--nojs .main-nav__toggle {
+    display: none;
 }
 
 
@@ -30,15 +46,52 @@
     flex-direction: column;
 }
 
-.main-nav__container--closed {
+/*.main-nav__container--closed {   ВЕРНУТЬ, ЕСЛИ ПОТРЕБУЕТСЯ
     display: none;
+}*/
+
+/*.main-nav__container--closed .toggle-button {
+    background-image: url("../img/index/menu-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+.main-nav__container--opened .toggle-button {
+    background-image: url("../img/index/menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}*/
 
 .main-nav__list {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: @mobile-width) {
+    .main-nav {
+        background-color: #FFFFFF;
+    }
+
+    .main-nav--nojs .main-nav__container {
+        position: static;
+    }
+
+    .main-nav--closed .main-nav__container {
+        display: none;
+    }
+    
+    .main-nav--opened .main-nav__container {
+        display: flex;
+        position: absolute;
+        content: "";
+        z-index: 10;
+        width: 100%;
+        height: min-content;
+        top: 79px;
+        left: 0;    
+    }    
 }
 
 @media (min-width: @tablet-width) {
@@ -50,7 +103,7 @@
     }
 
     .main-nav__logo-toggle-wrap {
-        width: 322px;
+        //width: 322px;
         justify-content: flex-start;
         margin-left: 50px;
         //width: 48%;    

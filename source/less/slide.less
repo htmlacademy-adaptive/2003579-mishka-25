@@ -22,8 +22,8 @@
 
 .slide__author {
     padding: 0;
-    margin-bottom: 12px;
-    font-size: 18px;
+    margin-bottom: 10px;
+    font-size: 17px;
     font-weight: 700;
     line-height: 24px;
     color: #000000;
@@ -41,15 +41,44 @@
 @media (min-width: @tablet-width) {
     .slide__text {
         margin: 0;
-        margin-top: 38.5px;
+        margin-bottom: 60px;
+        //margin-top: 38.5px;
         font-size: 17px;
     }
 
+    .slide__text br {
+        display: none;
+    }
+
     .slide__author {
-        margin-top: 61px;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: 18px;
+        //margin-top: 61px;
     }
 
     .slide__email {
         margin-bottom: 47px;
+    }
+}
+
+@media (min-width: @desktop-width) {
+    .slide__text {
+        width: 805px;
+        margin: 0;
+        padding-bottom: 41px;
+       // margin-top: 18px;
+    }
+
+    .slide__author {
+        margin: 0;
+        margin-bottom: 4px;
+        //margin-top: 33px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .slide__email {
+        margin-bottom: 42px;
     }
 }

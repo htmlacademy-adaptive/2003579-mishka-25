@@ -5,10 +5,11 @@
 }
 
 .qualities__item:not(:first-child) {
-    padding-top: 12px;
+    padding-top: 7px;
 }
 
 .qualities__definition {
+    width: 97px;
     font-family: inherit;
     font-size: 15px;
     font-weight: 400;
@@ -17,6 +18,8 @@
 }
 
 .qualities__value {
+    width: 160px;
+    margin: 0;
     font-family: inherit;
     font-size: 15px;
     font-weight: 400;
@@ -24,3 +27,8 @@
     color: #444444;
 }
 
+@media (min-width: @desktop-width) {
+    .qualities__item:not(:first-child) {
+        padding-top: 5px;
+    }
+}

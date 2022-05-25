@@ -5,6 +5,9 @@
 
 .advantages__wrapper {
     min-width: 320px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -12,7 +15,7 @@
 .advantages__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 82px;
+    margin-bottom: 50px;
     font-family: inherit;
     font-size: 25px;
     font-weight: 700;
@@ -49,7 +52,7 @@
     left: 8px;
     content: "";
     background-color: transparent;
-    background-image: url("../img/index/flower.svg");
+    background-image: url("../img/decorative/flower.svg");
     background-repeat: no-repeat;
 }
 
@@ -61,7 +64,7 @@
     left: 0px;
     content: "";
     background-color: transparent;
-    background-image: url("../img/index/scandi.svg");
+    background-image: url("../img/decorative/scandi.svg");
     background-repeat: no-repeat;
 }
 
@@ -73,7 +76,7 @@
     left: 7px;
     content: "";
     background-color: transparent;
-    background-image: url("../img/index/heart.svg");
+    background-image: url("../img/decorative/heart.svg");
     background-repeat: no-repeat;
 }
 
@@ -85,7 +88,7 @@
     left: 3px;
     content: "";
     background-color: transparent;
-    background-image: url("../img/index/clew.svg");
+    background-image: url("../img/decorative/clew.svg");
     background-repeat: no-repeat;
 }
 
@@ -97,7 +100,7 @@
     left: -6px;
     content: "";
     background-color: transparent;
-    background-image: url("../img/index/rocket.svg");
+    background-image: url("../img/decorative/rocket.svg");
     background-repeat: no-repeat;
 }
 
@@ -109,27 +112,47 @@
     left: 3px;
     content: "";
     background-color: transparent;
-    background-image: url("../img/index/present.svg");
+    background-image: url("../img/decorative/present.svg");
     background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
     .advantages__wrapper {
-        min-width: 668px;
+        width: 668px;
+        padding: 0;
     }
 
     .advantages__title {
         //margin-top: 56px;
         font-size: 43px;
         line-height: 50px;
+        margin-top: 15px;
+        margin-bottom: 78px;
     }
 
     .advantages__list {
         display: grid;
         max-width: 700px;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        margin-bottom: 0;
+        //grid-template-rows: 1fr 1fr 1fr;
+        margin: 0;
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .advantages__item:not(:last-child) {
+        margin-bottom:70px;
+    }
+
+    .advantages__item {
+        padding-left: 5px;
+    }
+
+    .advantages__item--ecology,
+    .advantages__item--cheep,
+    .advantages__item--likable {
+        padding-right: 110px;
+        padding-left: 0;
     }
 
     .advantages__item--ecology {
@@ -164,17 +187,87 @@
         grid-column: 2/3;
         grid-row: 3/4;
     }
+
+    .advantages__item--ecology::before {
+        top: -38px;
+    }
+
+    .advantages__item--cheep::before {
+        top: -35px;
+    }
+
+    .advantages__item--likable::before {
+        top: -30px;
+    }
+
+    .advantages__item--handmade::before {
+        top: -33px;
+        left: 5px;
+    }
+
+    .advantages__item--local::before {
+        top: -33px;
+        left: 0;
+    }
+
+    .advantages__item--present::before {
+        top: -34px;
+        left: 6px;
+    }
 }
 
 @media (min-width: @desktop-width) {
+    .advantages__wrapper {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .advantages__list {
+        grid-template-columns: 350px 350px;
+    }
+
     .advantages__title {
-        font-size: 43px;
-        line-height: 50px;
+        font-size: 53px;
+        line-height: 57px;
+        margin-top: 0;
+        margin-bottom: 75px;
+    }
+
+    .advantages__item {
+        padding-left: 0;
     }
 
     .advantages__item--ecology,
     .advantages__item--cheep,
     .advantages__item--likable {
         padding-right: 110px;
+    }
+
+    .advantages__item--ecology::before {
+        top: -40px;
+    }
+
+    .advantages__item--cheep::before {
+        top: -35px;
+    }
+
+    .advantages__item--likable::before {
+        top: -30px;
+    }
+
+    .advantages__item--handmade::before {
+        top: -33px;
+        left: 3px;
+    }
+
+    .advantages__item--local::before {
+        top: -33px;
+        left: -6px;
+    }
+
+    .advantages__item--present::before {
+        top: -34px;
+        left: 3px;
     }
 }
