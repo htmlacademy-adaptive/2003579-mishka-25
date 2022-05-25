@@ -15,19 +15,23 @@
 }
 
 .toggle .toggle-button {
-    background-image: url("../img/index/menu.svg");
+    background-image: url("../img/content/menu.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .toggle--cross .toggle-button {
-    background-image: url("../img/index/menu-close.svg");
+    background-image: url("../img/content/menu-close.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 @media (min-width: @tablet-width) {
     .toggle {
+        display: none;
+    }
+
+    .toggle--cross {
         display: none;
     }
 }

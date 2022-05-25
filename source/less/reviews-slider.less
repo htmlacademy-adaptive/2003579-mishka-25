@@ -42,15 +42,29 @@
     margin-bottom: 45px;
 }
 
-.reviews-slider__wrapper::after {
+/*.reviews-slider__wrapper::after {
     width: 100%;
     height: 6px;
     position: absolute;
     bottom: 0;
     content: "";
-    background-image: url("../img/index/zigzag-line-mobile.svg");
+    background-image: url("../img/decorative/zigzag-line-mobile.svg");
     background-repeat: repeat-x;
     z-index: 3;   
+}*/
+
+@media(max-width: @mobile-width) {
+    .reviews-slider::after {
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        bottom: 0;
+        content: "";
+        background-image: url("../img/decorative/zigzag-line-mobile.svg");
+        background-repeat: repeat-x;
+        background-size: contain;
+        z-index: 3;   
+    }
 }
 
 @media (min-width: @tablet-width) {
@@ -61,7 +75,7 @@
         bottom: 0;
         left: 0;
         content: "";
-        background-image: url("../img/index/zigzag-line-tablet.svg");
+        background-image: url("../img/decorative/zigzag-line-tablet.svg");
         background-repeat: repeat-x;
         z-index: 3;   
     }
@@ -86,10 +100,14 @@
         content: "";
         width: 350px;
         height: 457px;
-        background-image: url("../img/index/tablecloth.jpg");
+        background-image: url("../img/background/tablecloth-tablet@1x.jpg");
         background-position: left top;
         background-repeat: no-repeat;
         z-index: -3;
+
+        @media(min-resolution: 2dppx) {
+            background-image: url("../img/background/tablecloth-tablet@2x.jpg");
+        }
     }
 
     .reviews-slider__buttons {
@@ -136,7 +154,7 @@
         position: absolute;
         bottom: -17px;
         content: "";
-        background-image: url("../img/decorative/zigzag-line-desktop.svg.svg");
+        background-image: url("../img/decorative/zigzag-line-desktop.svg");
         background-repeat: repeat-x;
         z-index: 3;
     }
