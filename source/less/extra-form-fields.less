@@ -9,18 +9,26 @@
 }
 
 @media (min-width: @tablet-width) {
-    .extra-form-fields__textarea {
-        min-width: 501px;
-        max-width: 700px;
-    }
-
     .extra-form-fields {
         display: flex;
         box-sizing: border-box;
         padding-left: 217px;
         padding-right: 50px;
         margin-top: 50px;
+    }
+
+    .extra-form-fields__wrap {
         position: relative;
+        flex-grow: 1;
+    }
+
+    .extra-form-fields__textarea {
+        min-width: 501px;
+        max-width: 700px;
+    }
+
+    .extra-form-fields__legend {
+        margin-bottom: 0;
     }
 }
 
@@ -32,10 +40,9 @@
     }
 
     .extra-form-fields__wrap {
-        width: 1150px;
+        min-width: 501px;
+        max-width: 700px;
         box-sizing: border-box;
-        padding-left: 225px;
-        padding-right: 225px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -43,8 +50,4 @@
     .extra-form-fields__legend {
         margin: 0;
     }
-
-    //.extra-form-fields__textarea::placeholder {
-    //    margin-top: -15px;
-    //}
 }

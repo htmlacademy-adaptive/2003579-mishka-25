@@ -1,5 +1,5 @@
 .main-footer {
-    width: 100%;    
+    width: 100%;
     background-color: #F1F1F1;
 }
 
@@ -13,6 +13,11 @@
     align-items: center;
 }
 
+.main-footer_logo-link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .main-footer__logo {
     display: none;
 }
@@ -21,10 +26,18 @@
     .main-footer__logo {
         display: block;
         fill: #000000;
+
+        &:hover {
+            fill: #46C1AE;
+        }
+
+        &:active {
+            opacity: 0.3;
+            fill: #46C1AE;
+        }
     }
 
     .main-footer__wrap {
-        //min-width: 768px;
         width: 100%;
         box-sizing: border-box;
         padding: 51px 50px 58px 50px;

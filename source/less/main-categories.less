@@ -1,7 +1,6 @@
 .main-categories {
     display: flex;
     flex-direction: column;
-    //align-items: center;
     min-width: 320px;
     background-color: #F9F9F9;
 }
@@ -9,8 +8,6 @@
 .main-categories__wrapper {
     width: 100%;
     height: 489px;
-    //display: flex;
-    //flex-direction: column;
     justify-content: space-between;
     margin-right: auto;
     margin-left: auto;
@@ -23,7 +20,7 @@
     @media(min-resolution: 2dppx) {
         background-image: url(../img/background/plushies-mobile@2x.jpg);
     }
-}    
+}
 
 .main-categories__title {
     width: 320px;
@@ -50,7 +47,6 @@
         @media(min-resolution: 2dppx) {
             background-image: url(../img/background/plushies-tablet@2x.jpg);
         }
-        //position: relative;
     }
 
     .main-categories {
@@ -59,13 +55,11 @@
 
     .main-categories::after {
         height: 24px;
-        //width: 100vh;
         width: 100%;
         background-image: url("../img/decorative/zigzag-fill-tablet.svg");
         background-repeat: repeat-x;
         position: absolute;
         bottom: -12px;
-        //left: -50%;
         content: "";
         z-index: 3;
     }
@@ -77,22 +71,15 @@
         font-weight: 700;
         line-height: 50px;
     }
-
-    .main-categories__title br {
-        display: none;
-    }
 }
 
 @media (min-width: @desktop-width) {
     .main-categories__wrapper {
-        //max-width: 1050px;
         min-height: 746px;
-        //background-image: url("../img/background/plushies_desktop_1x.webp");
         background-image: url("../img/background/plushies-desktop@1x.jpg");
         background-position: top 25% center;
 
         @media(min-resolution: 2dppx) {
-            //background-image: url(../img/background/plushies_desktop_2x.webp);
             background-image: url(../img/background/plushies-desktop@2x.jpg);
             background-size: 2300px auto;
         }
@@ -100,7 +87,6 @@
 
     .main-categories::after {
         height: 34px;
-        //width: 100vh;
         width: 100%;
         background-image: url("../img/decorative/zigzag-fill-desktop.svg");
         background-repeat: repeat-x;
@@ -117,5 +103,9 @@
         font-size: 53px;
         font-weight: 700;
         line-height: 57px;
-    }    
+    }
+
+    .main-categories__title-mobile-br {
+        display: none;
+    }
 }
