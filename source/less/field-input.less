@@ -1,70 +1,69 @@
 .field-input {
-    width: 100%;
-    min-width: 260px;
-    height: 52px;
-    box-sizing: border-box;
-    padding-left: 0;
-    padding-right: 0;
-    background-color: transparent;
-    border-width: 0;
-    box-shadow: inset 0 -2px 0 #000000;
+  width: 100%;
+  min-width: 260px;
+  height: 52px;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+  border-width: 0;
+  box-shadow: inset 0 -2px 0 #000000;
 
-    &:hover {
-        box-shadow: inset 0 -2px 0 #62D1BA;
-    }
+  &:hover {
+    box-shadow: inset 0 -2px 0 #62d1ba;
+  }
 
-    &:active {
-        font-family: inherit;
-        font-size: 19px;
-        line-height: 18px;
-        color: #444444;
-        box-shadow: inset 0 -2px 0 #62D1BA;
-    }
+  &:active {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 18px;
+    color: #444444;
+    box-shadow: inset 0 -2px 0 #62d1ba;
+  }
 }
 
 .field-input--textarea {
-    width: 100%;
-    min-height: 142px;
-    box-sizing: border-box;
-    text-indent: -5px;
-    border: 2px solid #000000;
-    box-shadow: none;
+  width: 100%;
+  min-height: 142px;
+  box-sizing: border-box;
+  text-indent: -5px;
+  border: 2px solid #000000;
+  box-shadow: none;
 
-    &:hover {
-        border: 2px solid #62D1BA;
-    }
+  &:hover {
+    border: 2px solid #62d1ba;
+  }
 
-    &:active {
-        font-family: inherit;
-        font-size: 19px;
-        line-height: 18px;
-        color: #444444;
-        border: 2px solid #62D1BA;
-    }
+  &:active {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 18px;
+    color: #444444;
+    border: 2px solid #62d1ba;
+  }
 }
 
 
 .field-input::placeholder,
 .field-input--textarea::placeholder {
-    padding: 14px 17px 14px 20px;
-    font-family: 'Open Sans';
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 18px;
-    color: rgba(0, 0, 0, 0.3);
+  padding: 14px 17px 14px 20px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: @tablet-width) {
-
-    .field-input::placeholder,
-    .field-input--textarea::placeholder {
-        font-size: 19px;
-        line-height: 18px;
-    }
+  .field-input::placeholder,
+  .field-input--textarea::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-    .field-input {
-        max-width: 700px;
-    }
+  .field-input {
+    max-width: 700px;
+  }
 }

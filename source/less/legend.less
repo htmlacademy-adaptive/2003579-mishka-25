@@ -1,61 +1,61 @@
 .legend {
-    font-family: inherit;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 16px;
-    color: #63D1BB;
-    text-transform: uppercase;
-    border-width: 0;
-    position: relative;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #62d1bb;
+  text-transform: uppercase;
+  border-width: 0;
+  position: relative;
 }
 
 .legend::after {
-    min-width: 200px;
-    width: calc(50vw - 30px);
-    height: 1px;
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 60px;
-    border-bottom: 1px solid #63D1BB;
+  min-width: 200px;
+  width: calc(50vw - 30px);
+  height: 1px;
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 60px;
+  border-bottom: 1px solid #62d1bb;
 }
 
 .legend--mail::after {
-    min-width: 180px;
-    width: calc(50vw - 50px);
-    left: 80px;
+  min-width: 180px;
+  width: calc(50vw - 50px);
+  left: 80px;
 }
 
 @media (min-width: @tablet-width) {
-    .legend::after {
-        display: none;
-    }
+  .legend::after {
+    display: none;
+  }
 
-    .legend {
-        position: absolute;
-        top: 0;
-        left: 50px;
-        height: min-content;
-        width: min-content;
-        content: "";
-    }
+  .legend {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: min-content;
+    width: min-content;
+    content: "";
+  }
 
-    .legend--personal {
-        top: 20px;
-    }
+  .legend--personal {
+    top: 20px;
+  }
 
-    .legend--extra {
-        top: 20px;
-        left: -167px;
-    }
+  .legend--extra {
+    top: 20px;
+    left: -167px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-    .legend {
-        left: 110px;
-    }
+  .legend {
+    left: 110px;
+  }
 
-    .legend--extra {
-        left: -115px;
-    }
+  .legend--extra {
+    left: -115px;
+  }
 }

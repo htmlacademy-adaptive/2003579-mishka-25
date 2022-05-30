@@ -1,128 +1,124 @@
 .main-nav {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    min-width: 320px;
-    width: 100%;
-    z-index: 10;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 320px;
+  width: 100%;
+  z-index: 10;
 }
 
 .main-nav--active {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-nav__logo-toggle-wrap {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .main-nav__toggle {
-    position: absolute;
-    top: 22px;
-    right: 33px;
+  position: absolute;
+  top: 22px;
+  right: 33px;
 }
 
 .main-nav--nojs .main-nav__toggle {
-    display: none;
+  display: none;
 }
 
 .main-nav--opened .main-nav__toggle-button {
-    background-image: url("../img/content/menu-close.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("../img/content/menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-nav--closed .main-nav__toggle-button {
-    background-image: url("../img/content/menu.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url("../img/content/menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-nav__container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-nav__list {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: @mobile-width) {
-    .main-nav {
-        background-color: #FFFFFF;
-    }
+  .main-nav {
+    background-color: #ffffff;
+  }
 
-    .main-nav--closed .main-nav__container {
-        display: none;
-    }
+  .main-nav--closed .main-nav__container {
+    display: none;
+  }
 
-    .main-nav--nojs .main-nav__container {
-        display: flex;
-        position: static;
-    }
+  .main-nav--opened .main-nav__container {
+    display: flex;
+    position: absolute;
+    content: "";
+    z-index: 10;
+    width: 100%;
+    height: min-content;
+    top: 79px;
+    left: 0;
+  }
 
-    .main-nav--opened .main-nav__container {
-        display: flex;
-        position: absolute;
-        content: "";
-        z-index: 10;
-        width: 100%;
-        height: min-content;
-        top: 79px;
-        left: 0;
-    }
-
-    .main-nav--nojs .main-nav__container {
-        position: static;
-    }
+  .main-nav--nojs .main-nav__container {
+    display: flex;
+    position: static;
+  }
 }
 
 @media (min-width: @tablet-width) {
-    .main-nav {
-        min-width: 664px;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+  .main-nav {
+    min-width: 664px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
-    .main-nav__logo-toggle-wrap {
-        justify-content: flex-start;
-        margin-left: 50px;
-    }
+  .main-nav__logo-toggle-wrap {
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
 
-    .main-nav__container {
-        justify-self: flex-end;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-right: 50px;
-        margin-left: auto;
-    }
+  .main-nav__container {
+    justify-self: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    margin-left: auto;
+  }
 
-    .main-nav__list {
-        flex-direction: row;
-    }
+  .main-nav__list {
+    flex-direction: row;
+  }
 }
 
 @media (min-width: @desktop-width) {
-    .main-nav {
-        width: 1050px;
-    }
+  .main-nav {
+    width: 1050px;
+  }
 
-    .main-nav__logo-toggle-wrap {
-        width: 150px;
-        margin-left: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+  .main-nav__logo-toggle-wrap {
+    width: 150px;
+    margin-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    .main-nav__container {
-        width: 1050px;
-        justify-content: space-between;
-        margin-right: 0;
-    }
+  .main-nav__container {
+    width: 1050px;
+    justify-content: space-between;
+    margin-right: 0;
+  }
 }
