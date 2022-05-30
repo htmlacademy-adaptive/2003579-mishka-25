@@ -1,111 +1,111 @@
 .main-categories {
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-    background-color: #F9F9F9;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  background-color: #f9f9f9;
 }
 
 .main-categories__wrapper {
-    width: 100%;
-    height: 489px;
-    justify-content: space-between;
-    margin-right: auto;
-    margin-left: auto;
-    background-image: url(../img/background/plushies-mobile@1x.jpg);
-    background-position: top -17px right 50%;
-    background-repeat: no-repeat;
-    background-size: auto 373px;
-    background-color: #F9F9F9;
+  width: 100%;
+  height: 489px;
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url("../img/background/plushies-mobile@1x.jpg");
+  background-position: top -17px right 50%;
+  background-repeat: no-repeat;
+  background-size: auto 373px;
+  background-color: #f9f9f9;
 
-    @media(min-resolution: 2dppx) {
-        background-image: url(../img/background/plushies-mobile@2x.jpg);
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/plushies-mobile@2x.jpg");
+  }
 }
 
 .main-categories__title {
-    width: 320px;
-    justify-self: flex-end;
-    box-sizing: border-box;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 71px 30px 120px 30px;
-    font-family: inherit;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
+  width: 320px;
+  justify-self: flex-end;
+  box-sizing: border-box;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 71px 30px 120px 30px;
+  font-family: inherit;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
-    .main-categories__wrapper {
-        height: 746px;
-        background-image: url(../img/background/plushies-tablet@1x.jpg);
-        background-size: auto 746px;
-        background-position: top 0 right 50%;
+  .main-categories__wrapper {
+    height: 746px;
+    background-image: url("../img/background/plushies-tablet@1x.jpg");
+    background-size: auto 746px;
+    background-position: top 0 right 50%;
 
-        @media(min-resolution: 2dppx) {
-            background-image: url(../img/background/plushies-tablet@2x.jpg);
-        }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/plushies-tablet@2x.jpg");
     }
+  }
 
-    .main-categories {
-        position: relative;
-    }
+  .main-categories {
+    position: relative;
+  }
 
-    .main-categories::after {
-        height: 24px;
-        width: 100%;
-        background-image: url("../img/decorative/zigzag-fill-tablet.svg");
-        background-repeat: repeat-x;
-        position: absolute;
-        bottom: -12px;
-        content: "";
-        z-index: 3;
-    }
+  .main-categories::after {
+    height: 24px;
+    width: 100%;
+    background-image: url("../img/decorative/zigzag-fill-tablet.svg");
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: -12px;
+    content: "";
+    z-index: 3;
+  }
 
-    .main-categories__title {
-        width: 668px;
-        padding: 154px 50px 372px 50px;
-        font-size: 43px;
-        font-weight: 700;
-        line-height: 50px;
-    }
+  .main-categories__title {
+    width: 668px;
+    padding: 154px 50px 372px 50px;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-    .main-categories__wrapper {
-        min-height: 746px;
-        background-image: url("../img/background/plushies-desktop@1x.jpg");
-        background-position: top 25% center;
+  .main-categories__wrapper {
+    min-height: 746px;
+    background-image: url("../img/background/plushies-desktop@1x.jpg");
+    background-position: top 25% center;
 
-        @media(min-resolution: 2dppx) {
-            background-image: url(../img/background/plushies-desktop@2x.jpg);
-            background-size: 2300px auto;
-        }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/plushies-desktop@2x.jpg");
+      background-size: 2300px auto;
     }
+  }
 
-    .main-categories::after {
-        height: 34px;
-        width: 100%;
-        background-image: url("../img/decorative/zigzag-fill-desktop.svg");
-        background-repeat: repeat-x;
-        position: absolute;
-        bottom: -17px;
-        left: 0;
-        content: "";
-        z-index: 3;
-    }
+  .main-categories::after {
+    height: 34px;
+    width: 100%;
+    background-image: url("../img/decorative/zigzag-fill-desktop.svg");
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    content: "";
+    z-index: 3;
+  }
 
-    .main-categories__title {
-        width: 1050px;
-        padding: 158px 228px 298px 228px;
-        font-size: 53px;
-        font-weight: 700;
-        line-height: 57px;
-    }
+  .main-categories__title {
+    width: 1050px;
+    padding: 158px 228px 298px 228px;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
+  }
 
-    .main-categories__title-mobile-br {
-        display: none;
-    }
+  .main-categories__title-mobile-br {
+    display: none;
+  }
 }

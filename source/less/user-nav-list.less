@@ -1,118 +1,118 @@
 .user-nav-list {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #000000;
-    text-align: center;
-    list-style-type: none;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  text-align: center;
+  list-style-type: none;
 }
 
 .user-nav-list__icon {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 .user-nav-list__link {
-    display: flex;
-    justify-content: center;
-    padding-top: 28.5px;
-    padding-bottom: 26.5px;
-    align-self: center;
-    background-color: #FFFFFF;
-    font-family: inherit;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #000000;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0px 1px 0px #ECECEC, inset 0px 1px 0px #ECECEC;
+  display: flex;
+  justify-content: center;
+  padding-top: 28.5px;
+  padding-bottom: 26.5px;
+  align-self: center;
+  background-color: #ffffff;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
 
-    &:hover {
-        color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:hover .user-nav-list__icon {
+    opacity: 1;
+    fill: #63d1bb;
+
+    path {
+      fill: #63d1bb;
     }
+  }
 
-    &:hover .user-nav-list__icon {
-        opacity: 1;
-        fill: #63D1BB;
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 
-        path {
-            fill: #63D1BB;
-        }
+  &:active .user-nav-list__icon {
+    opacity: 0.3;
+    fill: #63d1bb;
+
+    path {
+      fill: #63d1bb;
     }
-
-    &:active {
-        color: rgba(0, 0, 0, 0.3);
-    }
-
-    &:active .user-nav-list__icon {
-        opacity: 0.3;
-        fill: #63D1BB;
-
-        path {
-            fill: #63D1BB;
-        }
-    }
+  }
 }
 
 @media (max-width: @mobile-width) {
-    .user-nav-list__icon {
-        padding-right: 26px;
-    }
+  .user-nav-list__icon {
+    padding-right: 26px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-    .user-nav-list {
-        order: -1;
-        width: 348px;
-    }
+  .user-nav-list {
+    order: -1;
+    width: 348px;
+  }
 
-    .user-nav-list__item {
-        border-left: 1px solid rgba(0, 0, 0, 0.1);
-    }
+  .user-nav-list__item {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
 
-    .user-nav-list__link {
-        width: 266px;
-        box-sizing: border-box;
-        padding-top: 34px;
-        padding-left: 31px;
-        padding-bottom: 31px;
-        box-shadow: none;
-    }
+  .user-nav-list__link {
+    width: 266px;
+    box-sizing: border-box;
+    padding-top: 34px;
+    padding-left: 31px;
+    padding-bottom: 31px;
+    box-shadow: none;
+  }
 
-    .user-nav-list__link--search {
-        box-sizing: border-box;
-        width: 82px;
-        padding-top: 36px;
-        padding-left: 30px;
-        padding-bottom: 34px;
-    }
+  .user-nav-list__link--search {
+    box-sizing: border-box;
+    width: 82px;
+    padding-top: 36px;
+    padding-left: 30px;
+    padding-bottom: 34px;
+  }
 
-    .user-nav-list__link span {
-        display: inline-block;
-    }
+  .user-nav-list__link span {
+    display: inline-block;
+  }
 
-    .user-nav-list__link--search span {
-        display: none;
-    }
+  .user-nav-list__link--search span {
+    display: none;
+  }
 
-    .user-nav-list__icon {
-        padding-right: 30px;
-    }
+  .user-nav-list__icon {
+    padding-right: 30px;
+  }
 
-    .user-nav-list__link--search .user-nav-list__icon {
-        padding-right: 0;
-    }
+  .user-nav-list__link--search .user-nav-list__icon {
+    padding-right: 0;
+  }
 
-    .user-nav-list__item:not(:last-child) a {
-        padding-right: 31px;
-    }
+  .user-nav-list__item:not(:last-child) a {
+    padding-right: 31px;
+  }
 }
 
 @media (min-width: @desktop-width) {
-    .user-nav-list {
-        min-width: 350px;
-        max-width: 440px;
-        flex-wrap: wrap;
-        order: 0;
-    }
+  .user-nav-list {
+    min-width: 350px;
+    max-width: 440px;
+    flex-wrap: wrap;
+    order: 0;
+  }
 }
