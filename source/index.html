@@ -4,23 +4,27 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico"><!--32x32-->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/icon-180.png"><!-- 180×180 -->
+  <link rel="preload" href="fonts/opensans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" type="font/woff2" crossorigin>
   <link href="css/style.min.css" rel="stylesheet">
 </head>
-<body class="page__body">  
+<body class="page__body">
   <header class="main-header">
-    <nav class="main-nav main-nav--closed"> <!--main-nav--opened, main-nav--nojs-->
+    <nav class="main-nav main-nav--closed main-nav--nojs"><!--При открытии меню класс должен меняться на .main-nav--opened; класс .main-nav--nojs должен исчезать при включенном JS-->
       <div class="main-nav__logo-toggle-wrap">
-        <a class="main-header__logo" href="#">        
-            <picture>
-              <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg" width="149" height="72">
-              <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg" width="114" height="46">
-              <img class="main-header__logo-image" src="img/content/mishka-logo-mobile.svg" width="86" height="35"
+        <a class="main-header__logo" href="#">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg" width="114" height="46">
+            <img class="main-header__logo-image" src="img/content/mishka-logo-mobile.svg" width="86" height="35"
               alt="Mishka.">
-            </picture>
+          </picture>
         </a>
         <div class="main-nav__toggle toggle">
-          <!--ДЛЯ СМЕНЫ СОСТОЯНИЯ МЕНЮ И ИКОНКИ КНОПКИ, ОТВЕЧАЮЩЕЙ ЗА ОТКРЫТИЕ МЕНЮ, ПОДСТАВЛЯТЬ ВМЕСТО toggle КЛАСС ".toggle--cross" -->
-          <button class="main-nav__toggle-button toggle-button">
+          <button class="main-nav__toggle-button toggle-button" aria-label="Открытие-закрытие меню">
             <span class="visually-hidden">Кнопка открытия и закрытия выпадающего меню</span>
           </button>
         </div>
@@ -37,15 +41,15 @@
         <ul class="main-nav__list user-nav-list">
           <li class="user-nav-list__item">
             <a class="user-nav-list__link user-nav-list__link--search" href="#">
-              <svg class="user-nav-list__icon" width="18" height="18">
+              <svg class="user-nav-list__icon" focusable="false" width="18" height="18" aria-label="Поиск по сайту">
                 <use xlink:href="img/sprite.svg#icon-search"></use>
               </svg>
               <span>Поиск по сайту</span>
             </a>
           </li>
-          <li class="user-nav-list__item">            
+          <li class="user-nav-list__item">
             <a class="user-nav-list__link" href="#">
-              <svg class="user-nav-list__icon" width="21" height="18" viewBox="0 0 21 18" xmlns="http://www.w3.org/2000/svg">
+              <svg class="user-nav-list__icon" focusable="false" width="21" height="18" aria-label="Переход в корзину">
                 <use xlink:href="img/sprite.svg#icon-cart"></use>
               </svg>
               <span>Корзина: пока пуста</span>
@@ -74,19 +78,26 @@
     <h1 class="visually-hidden">Вязаные игрушки, корзины и другие предметы интерьера ручной работы</h1>
     <section class="main-container__categories main-categories">
       <div class="main-categories__wrapper">
-        <h2 class="main-categories__title">Милые штуки ручной<br> работы для дома</h2>
+        <h2 class="main-categories__title">Милые штуки ручной&nbsp;<br class="main-categories__title-mobile-br">работы
+          для дома</h2>
         <ul class="categories-list">
           <li class="categories-list__item">
-            <a class="categories-list__link" href="#">Предметы интерьера</a>
+            <a class="categories-list__link" href="#">
+              <span>Предметы<br>
+                интерьера</span>
+            </a>
           </li>
           <li class="categories-list__item categories-list__item--secondary">
-            <a class="categories-list__link" href="#">Детские игрушки</a>
+            <a class="categories-list__link" href="#">
+              <span>Детские<br>
+                игрушки</span>
+            </a>
           </li>
         </ul>
       </div>
     </section>
     <section class="flycard">
-      <div class="flycard__wrapper"> <!--container-->
+      <div class="flycard__wrapper">
         <div class="flycard__titles-wrap">
           <h2 class="flycard__title">Вязаные корзинки</h2>
           <b class="flycard__subtitle">Товар недели</b>
@@ -113,19 +124,20 @@
             <b class="flycard__price">Цена: 990 руб.</b>
             <button class="flycard__order-button button" type="button">Заказать</button>
           </div>
-          <!--<img class="flycard__image" src="img/content/triple-set-mobile@1x.jpg" width="260" height="315">-->
           <picture class="flycard__image">
-            <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+            <source media="(min-width: 1150px)"
+              srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
             <img src="img/content/triple-set-mobile@1x.jpg"
-            srcset="img/content/triple-set-mobile@1x.jpg 1x, img/content/triple-set-mobile@2x.jpg 2x"
-            style="width: 100%" alt="Фотография трех вязаных корзинок разных размеров.">
+              srcset="img/content/triple-set-mobile@1x.jpg 1x, img/content/triple-set-mobile@2x.jpg 2x"
+              style="width: 100%" alt="Фотография трех вязаных корзинок разных размеров.">
           </picture>
         </div>
       </div>
     </section>
     <section class="main-container__advantages advantages">
-      <div class="advantages__wrapper"> <!--container-->
+      <div class="advantages__wrapper">
         <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--ecology">
@@ -135,7 +147,7 @@
             </p>
           </li>
           <li class="advantages__item advantages__item--cheep">
-            <p class="advantages__description about-us__description">
+            <p class="advantages__description">
               Скандинавский стиль <br>
               по российской цене
             </p>
@@ -171,12 +183,12 @@
       <div class="reviews-slider__wrapper container">
         <h2 class="reviews-slider__title">Отзывы</h2>
         <ul class="reviews-slider__list">
-          <li class="reviews-slider__item slide slide--current">
-            <!--ДЛЯ ДРУГИХ, НЕАКТИВНЫХ, ЭЛЕМЕНТОВ СПИСКА ИСПОЛЬЗОВАТЬ КЛАСС ".slide" ВМЕСТО ".slide--current"-->
+          <li class="reviews-slider__item slide slide--current"><!--ДЛЯ ДРУГИХ, НЕАКТИВНЫХ, ЭЛЕМЕНТОВ СПИСКА ИСПОЛЬЗОВАТЬ КЛАСС ".slide" ВМЕСТО ".slide--current"-->
             <p class="slide__text">
-              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как<br>
-              у популярных инстамамочек.<br>
-              В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br>
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как&nbsp;<br
+                class="slide__text-br-mobile slide__text-br-desktop">
+              у популярных инстамамочек.&nbsp;<br class="slide__text-br-mobile">
+              В отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp;<br class="slide__text-br-mobile">
               и мои фотографии сразу стали более стильными, а также набирают больше лайков!
             </p>
             <b class="slide__author">Анастасия Красильникова</b>
@@ -186,14 +198,14 @@
         <div class="reviews-slider__buttons slider-buttons">
           <button class="slider-buttons__item" type="button">
             <span class="visually-hidden">Назад</span>
-            <svg class="slider-buttons__arrow-icon" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" />
+            <svg class="slider-buttons__arrow-icon" focusable="false" width="50" height="26">
+              <use xlink:href="img/sprite.svg#left-arrow"></use>
             </svg>
           </button>
-          <button class="slider-buttons__item--forward" type="button">
+          <button class="slider-buttons__item slider-buttons__item--forward" type="button">
             <span class="visually-hidden">Вперед</span>
-            <svg class="slider-buttons__arrow-icon" width="50" height="26" viewBox="0 0 50 26" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" />
+            <svg class="slider-buttons__arrow-icon" focusable="false" width="50" height="26" viewBox="0 0 50 26">
+              <use xlink:href="img/sprite.svg#right-arrow"></use>
             </svg>
           </button>
         </div>
@@ -208,7 +220,9 @@
         <dl class="contacts__list container">
           <div class="contacts__item">
             <dt class="contacts__type">e-mail:</dt>
-            <dd class="contacts__path">info@mimimishkashop.ru</dd>
+            <dd class="contacts__path">
+              <a class="contacts__path-link-email" href="#">info@mimimishkashop.ru</a>
+            </dd>
           </div>
           <div class="contacts__item">
             <dt class="contacts__type">адрес:</dt>
@@ -216,25 +230,37 @@
               ул. Большая Конюшенная<br>
               д. 19/8, офис 101</dd>
           </div>
-        </dl>    
+        </dl>
         <div class="contacts__map-wrap">
           <h3 class="visually-hidden">Как нас найти?</h3>
-          <!--<img class="contacts__map-image" src="img/index/map.jpg" width="320" height="455" alt="Карта с меткой магазина Мишка и окрестностями">-->
           <iframe class="contacts__map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d781.777526641044!2d30.32331182152438!3d59.938619008727976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1650493451704!5m2!1sru!2sru"
-            width="100%" height="455" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>    
+            height="455" style="border:0; width:100%" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Наш офис находится по адресу г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101."></iframe>
+          <div class="contacts__map-const-image-wrap">
+            <picture class="contacts__map-const-image">
+              <source media="(min-width: 1150px)"
+                srcset="img/content/map-desktop@1x.jpg 1x, img/content/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/content/map-tablet@1x.jpg 1x, img/content/map-tablet@2x.jpg 2x">
+              <img src="img/content/map-mobile@1x.jpg"
+                srcset="img/content/map-mobile@1x.jpg 1x, img/content/map-mobile@2x.jpg 2x" style="width: 100%"
+                height="455" alt="Как нас найти.">
+            </picture>
+          </div>
+        </div>
         <a class="contacts__open-feedback-window button" href="#">Напишите нам</a>
       </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrap">
-      <svg class="main-footer__logo" width="102" height="34" viewBox="0 0 102 34" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M19.22 21.38c-.1-2.68-.5-5.27-.5-7.95 0-2.2.4-4.38-.4-6.47 0-.2.1-.5.1-.7.2-.99-3.3-.5-3.8.5-.3.3-.5.6-.4 1 0 .1.1.2.1.3-.7 3.18-1.6 6.26-2.6 9.34-.4 1.2-.9 2.3-1.3 3.48-.6-1.09-1.2-2.18-1.6-3.38-1.4-3.38-2.6-6.86-4.3-10.14.2-1.5-3.2-1.4-3.9 0-.8 1.69-.7 3.38-.4 5.17.3 1.99.4 3.98.4 6.07 0 3.97.4 7.85.4 11.83-.4.4-.5.9-.1 1.4.2.2.4.4.6.5 1 .69 3.6.09 3.6-1.3 0-4.08-.3-8.16-.4-12.33v-1.2c.1.1.1.3.2.4.6 1.6 1.3 3.18 2.2 4.67.9 1.5 1.3 3.09 1.8 4.68-.2.2-.3.5-.2.7 0 .2.1.3.3.4.6.49 1.8.3 2.5 0 .3-.1.6-.3.8-.4.3-.2.9-.7.7-1.2 0-.1-.1-.2-.1-.3.5-1.29.7-2.58 1-3.88.3-1.39.8-2.78 1.3-4.07.1.6.1 1.2.2 1.89.2 2.58 0 5.07 0 7.55 0 .8.1 1.6.2 2.5.1.29.4 1.78.3 1.88-.8.5-.6 1.1.2 1.3.9.2 2.1-.1 2.8-.7 1.2-1.1.6-2.79.4-4.18-.5-2.39 0-4.97-.1-7.36ZM27.62 22.08c-.1-2-.8-3.88-.8-5.87 0-2.29.2-4.57-.2-6.86-.1-.7-4.1.1-3.9 1 .3 2.08.2 4.17.2 6.36 0 1.99.5 3.88.7 5.86.3 2.1-.1 4.18.1 6.17.1 1 .8 2.69.1 3.58-.4.5 1.5.3 1.6.3.8-.1 1.8-.4 2.3-1 .7-.8.2-2.38.1-3.38-.3-1.99-.1-4.17-.2-6.16ZM43.92 18.8c-2.1-2.79-5.9-.8-8.6-1.5-1.4-.4-1.4-2.28-1.4-3.38 0-1.39-.1-2.68-.3-4.07-.1-1.1 0-2.1.7-2.89.1-.1.9-.3.8-.3.4-.1.7-.1 1.1-.1 1.5-.1 4.6.2 4 2.49-.3 1 3.6.4 3.9-.6 1.2-4.57-7.3-3.68-9.7-3.08-2.2.6-4.6 1.79-4.8 4.38-.1 1.19.3 2.38.3 3.58.1 1.39-.2 2.78.3 4.07 1.1 2.99 5.5 1.6 7.8 1.7 3.8.3 2.7 5.46 2.7 7.85 0 1.3 1.2 3.38.2 4.48-.6.7-2 .7-2.8.8-.8.1-2.2.29-2.7-.5-1-1.4.1-3.79-.1-5.38-.1-.9-4.1-.1-3.9 1 .3 2.58-1.4 6.06 2.4 6.56 2.4.3 5.2-.2 7.5-.9 1.2-.4 2.3-.89 3.2-1.78 1-.9.7-2.3.4-3.48-.5-3.09.9-6.47-1-8.95ZM61.32 18.6c-.1-3.78-.7-7.46-.7-11.24 0-1.99-4-1.3-4 .3 0 3.58.5 7.16.7 10.74v.2c-1.9 0-3.9.2-5.9.2.2-4.58-.6-9.15-.4-13.83 0-.6-3.9-.1-3.9 1-.2 4.47.6 8.85.5 13.32l-.3 6.37c0 1.1.2 2.19.3 3.28.1 1 .5 2.29.2 3.28-.2.8 3.6.3 3.9-.7.5-1.79-.2-3.97-.4-5.76-.2-1.7 0-3.48.1-5.17 2-.1 4.1-.3 6.1 0l.3 4.07c.1 1.2.2 2.29.2 3.48 0 1 .1 2.49-.2 3.48-.8 2.1 3.1 1.9 3.7.4.7-1.89.5-4.17.4-6.16-.2-2.49-.6-4.88-.6-7.26ZM78.22 22.97c-.9-2.78-2.4-5.17-3.6-7.75 1-1.9 2-3.88 2.9-5.87.8-1.8 1.4-3.78 3.1-5.07.6-.4.6-.9-.3-1-.9-.1-2.1.2-2.8.7-1.4 1.3-2.4 2.68-3.1 4.37-.9 2.1-1.9 4.08-2.9 6.07-.1.1-.1.3-.2.4-.5.3-.8.8-.6 1.3a66.9 66.9 0 0 1-2.5 4.57c-.3-5.47-1-11.04-1.2-16.51 0-1.3-4-.5-3.9 1 .2 6.85 1.2 13.62 1.3 20.48v.1c-.3.3-.2.5.1.6 0 1.78-.1 3.47-.2 5.26-.5.7.5 1.1 1.1 1.1h.1c.7 0 2.6-.3 2.7-1.4.2-2.08.3-4.17.2-6.26 1.6-1.69 2.9-3.58 4.1-5.57.8 1.5 1.5 2.99 2 4.58.9 2.68 2.3 5.27 3.1 7.95.5 1.8 4.5.7 3.9-1-1-2.78-2.4-5.26-3.3-8.05ZM101.72 18.4c-.2-.8-1.4-.8-2.3-.8v-1c-.1-2.68-.2-5.36-.4-7.95-.2-2.48-1.6-3.28-4-3.18-2.4.1-5.2.5-7.5 1.4-2.6.99-4.1 2.88-4.6 5.66-.5 2.98.2 6.17.4 9.15.2 3.48.1 6.96.1 10.44 0 .6 3.9 0 3.9-1v-8.25c0-.8-.1-1.59-.1-2.38 1.4-.6 3.7 0 5.1.1 1.1.1 2.2-.2 3.2-.3 0 2.29.1 4.57.2 6.86 0 1.2.5 3.48-.4 4.47-.4.5 1.5.3 1.6.3.8-.1 1.8-.4 2.3-1 .9-1.09.5-3.77.4-5.06-.1-1.9-.1-3.78-.1-5.67 1.1-.2 2.4-.9 2.2-1.8Zm-14.6-.1-.3-3.68c-.2-2.29.1-5.57 2.3-6.96.6-.4 1.7-.3 2.4-.4 1-.2 2-.4 2.8.2 1.2.8.9 3.68.9 4.87 0 2 .2 3.98.3 5.97-.6.1-1.1.1-1.7.1-2.3-.2-4.6-.6-6.7-.1ZM24.22 6.66c.5-.1 1-.2 1.5-.5l.2-.2c.5-.3 1-.79.7-1.39-.5-1.09-.4-2.18-.4-3.38 0-1-1-1.19-1.8-1.19-.7.1-2.2.6-2.2 1.5 0 .99-.1 1.98.1 2.98 0 .1-.1.2-.1.4-.1.2 0 .4.1.59v.4c.1.2.2.4.4.5.6.3 1.1.3 1.5.3Z" />
-      </svg>
+      <a class="main-footer__logo-link" href="index.html">
+        <svg class="main-footer__logo" focusable="false" width="102" height="34">
+          <use xlink:href="img/sprite.svg#footer-mishka-logo"></use>
+        </svg>
+      </a>
       <section class="social-media">
         <div class="social-media__wrapper">
           <h2 class="visually-hidden">Аккаунты Mishka в социальных сетях</h2>
@@ -242,7 +268,7 @@
             <li class="social-media__item">
               <a class="social-media__link" href="#">
                 <span class="visually-hidden">Вконтакте</span>
-                <svg class="social-media__icon" width="27" height="18">
+                <svg class="social-media__icon" focusable="false" width="27" height="18">
                   <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
                 </svg>
               </a>
@@ -250,7 +276,7 @@
             <li class="social-media__item">
               <a class="social-media__link" href="#">
                 <span class="visually-hidden">Youtube</span>
-                <svg class="social-media__icon" width="24" height="20">
+                <svg class="social-media__icon" focusable="false" width="24" height="20">
                   <use xlink:href="img/sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
@@ -258,7 +284,7 @@
             <li class="social-media__item">
               <a class="social-media__link" href="#">
                 <span class="visually-hidden">Телеграм</span>
-                <svg class="social-media__icon" width="20" height="18">
+                <svg class="social-media__icon" focusable="false" width="20" height="18">
                   <use xlink:href="img/sprite.svg#icon-telegram"></use>
                 </svg>
               </a>
@@ -269,41 +295,41 @@
       <div class="webdeveloper-info">
         <a class="webdeveloper-info__link" href="https://htmlacademy.ru">
           <b class="webdeveloper-info__pointer">Разработано</b>
-          <svg class="webdeveloper-info__icon" width="27" height="35">
+          <svg class="webdeveloper-info__icon" focusable="false" width="27" height="35">
             <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
-  <div class="modal-container">  <!--ДЛЯ ПОЯВЛЕНИЯ МОДАЛЬНОГО ОКНА НЕОБХОДИМО ДОБАВИТЬ КЛАСС activate-modal-window -->
-    <div class="modal-container__wrap"> <!-- ДЛЯ ПОЯВЛЕНИЯ МОДАЛЬНОГО ОКНА НЕОБХОДИМО ДОБАВИТЬ КЛАСС activate-modal-window -->
-     <h2 class="modal-container__title">Добавить в корзину</h2>
+  <div class="modal-container"><!--ДЛЯ ПОЯВЛЕНИЯ МОДАЛЬНОГО ОКНА НЕОБХОДИМО ДОБАВИТЬ КЛАСС modal-container--active -->
+    <div class="modal-container__wrap">
+      <h2 class="modal-container__title">Добавить в корзину</h2>
       <div class="modal-container__size-choice">
         <span class="modal-container__message">Выберите размер</span>
         <ul class="modal-container__buttons-list">
           <li class="modal-container__buttons-list-item">
-            <button class="modal-container__size-button">
+            <button class="modal-container__size-button" aria-label="Выбрать размер S">
               <span>S</span>
             </button>
           </li>
           <li class="modal-container__buttons-list-item">
-            <button class="modal-container__size-button">
+            <button class="modal-container__size-button" aria-label="Выбрать размер M">
               <span>M</span>
             </button>
           </li>
           <li class="modal-container__buttons-list-item">
-            <button class="modal-container__size-button">
+            <button class="modal-container__size-button" aria-label="Выбрать размер L">
               <span>L</span>
             </button>
-          </li>          
+          </li>
         </ul>
-        <button class="modal-container__order-button" type="button">
+        <button class="modal-container__order-button" type="button" aria-label="Добавить выбранный размер в корзину">
           <span>Добавить</span>
         </button>
       </div>
     </div>
   </div>
-  <!--<script src="script.js"></script>-->
+  <script src="js/script.js"></script>
 </body>
 </html>

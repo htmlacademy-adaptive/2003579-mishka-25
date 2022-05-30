@@ -17,6 +17,14 @@
     fill: #000000;
 }
 
+.main-header__logo:hover .main-header__logo-image {
+    opacity: 60%;
+}
+
+.main-header__logo:active .main-header__logo-image {
+    opacity: 30%;
+}
+
 .main-header__logo-image--black-back {
     display: none;
 }
@@ -31,44 +39,14 @@
     }
 
     .main-header__logo {
-        //padding-top: 24px;
-        //padding-bottom: 20px;
         display: flex;
         justify-content: flex-start;
-    }    
-
-    /*.main-header__logo-image {
-        display: none;
     }
-
-    .main-header__logo-image--black-back {   ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
-        display: block;
-        fill: #FFFFFF;
-    }
-
-    .main-header__logo-image--black-splat {
-        display: none;
-    }*/ 
 }
 
 @media (min-width: @desktop-width) {
     .main-header__logo {
-        //padding-top: 9px;  ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
-        //padding-bottom: 13.5px;  ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
         display: flex;
         justify-content: flex-start;
-    }    
-
-    /*.main-header__logo-image {
-        display: none;
     }
-
-    .main-header__logo-image--black-back { ВОССТАНОВИТЬ ЭТО ЗНАЧЕНИЕ ПРИ РАБОТЕ С ГРАФИКОЙ
-        display: none;
-    }
-
-    .main-header__logo-image--black-splat {
-        display: block;
-        fill: #FFFFFF;
-    }*/
 }

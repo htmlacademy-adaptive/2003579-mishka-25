@@ -10,4 +10,18 @@
     background-color: transparent;
     border: 2px solid #444444;
     cursor: pointer;
+
+    &:hover {
+        color: #FFFFFF;
+        background-color: #444444;
+    }
+
+    &:active {
+        color: rgba(255, 255, 255, 0.3);
+        background-color: #444444;
+    }
+
+    @media (min-width: @tablet-width) {
+        font-size: 17px;
+    }
 }
